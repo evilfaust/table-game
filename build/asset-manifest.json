@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/assets/esl-react/build/static/css/main.78f270a6.css",
+    "main.js": "/assets/esl-react/build/static/js/main.c765266a.js",
+    "static/js/453.3ab8d62e.chunk.js": "/assets/esl-react/build/static/js/453.3ab8d62e.chunk.js",
+    "static/media/hero-3-bg.png": "/assets/esl-react/build/static/media/hero-3-bg.beacfbc73987e39f21f2.png",
+    "index.html": "/assets/esl-react/build/index.html",
+    "main.78f270a6.css.map": "/assets/esl-react/build/static/css/main.78f270a6.css.map",
+    "main.c765266a.js.map": "/assets/esl-react/build/static/js/main.c765266a.js.map",
+    "453.3ab8d62e.chunk.js.map": "/assets/esl-react/build/static/js/453.3ab8d62e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.78f270a6.css",
+    "static/js/main.c765266a.js"
+  ]
+}
