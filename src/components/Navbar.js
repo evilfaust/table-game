@@ -41,7 +41,7 @@ const Navbar = () => {
       {/* Логотип (слева) */}
       <div className="logo-container">
         <a className="logo" href="https://emcotech.site">
-          <img src="/images/esl-logo.png" style={{ height: 24 }} alt="EMCO.TECH.SPORTS" />
+          <img src="/assets/esl-react/build/images/esl-logo.png" style={{ height: 24 }} alt="EMCO.TECH.SPORTS" />
         </a>
       </div>
 
