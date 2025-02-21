@@ -25,19 +25,19 @@ const EsportAbout = () => {
     <>
     <section>
         <Row gutter={[16, 16]} >
-            <Col span={8} justify="center" align="middle" >
+            <Col sm={24} xs={24}  md={24} lg={12} justify="center" align="middle" >
                 <Title level={5} style={{ fontSize: '1.2rem', display: 'block', marginBottom: '0.5rem' }}>
                     Мы в детском технопарке EMCO.TECH видим большой потенциал в развитии киберспорта и рады объявить о запуске EMCO Season League 2025 для школьников, студентов СПО и ВУЗов Сахалинской области.
                 </Title>
             </Col>
-            <Col span={16}>
+            <Col sm={24} xs={24}  md={24} lg={12} >
                 <Row>
                     {mission.map((item, index) => (
                         <Row key={index} gutter={[8, 8]}>
-                            <Col span={2}><div style={{ marginBottom: '5px' }}>{item.icon}</div></Col>
-                            <Col span={4} ><Title level={3} style={{color: "#FEA202"}}>{item.title}</Title></Col>
-                            <Col span={16}><Text>{item.description}</Text></Col>
-                            <Divider style={{ margin: '2px 0' }} />
+                            <Col sm={12} xs={24}  md={12} lg={2} ><div style={{ marginBottom: '5px' }}>{item.icon}</div></Col>
+                            <Col sm={12} xs={24}  md={24} lg={4} ><Title level={3} style={{color: "#FEA202"}}>{item.title}</Title></Col>
+                            <Col sm={24} xs={24}  md={24} lg={18} ><Text>{item.description}</Text></Col>
+                            {/* <Divider style={{ margin: '2px 0' }} /> */}
                         </Row>
                     ))}
                 </Row>

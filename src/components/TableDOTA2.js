@@ -352,11 +352,11 @@ const columns = [
               <Col span={16}>
                 <Row>
                   <Col span={12}>
-                    <Text type="secondary">Real Name</Text>
+                    <Text type="secondary">Фамилия Имя</Text>
                     <Title level={4}>{selectedPlayer.Name || 'N/A'}</Title>
                   </Col>
                   <Col span={12}>
-                    <Text type="secondary">Nickname</Text>
+                    <Text type="secondary">Никнейм</Text>
                     <Title level={4}>{selectedPlayer.NikName || 'N/A'}</Title>
                   </Col>
                 </Row>
@@ -367,19 +367,29 @@ const columns = [
                     <Title level={5}><a target="_blank" rel="noopener noreferrer" href={`https://steamcommunity.com/profiles/${selectedPlayer.SteamID}`}>{selectedPlayer.SteamID || 'N/A'}</a></Title>
                   </Col>
                   <Col span={12}>
-                    <Text type="secondary">Telegram</Text>
-                    <Title level={5}>{selectedPlayer.TG || 'N/A'}</Title>
+                    <Text type="secondary">Бывшие команды</Text>
+                    <Title level={5}>{selectedPlayer.former_teams || 'N/A'}</Title>
                   </Col>
                 </Row>
 
                 <Row style={{ marginTop: 16 }}>
                   <Col span={12}>
-                    <Text type="secondary">Created</Text>
-                    <div>{formatDate(selectedPlayer.created)}</div>
+                    <Text type="secondary">Достижения</Text>
+                    <Title level={5}>{selectedPlayer.player_achievements || 'N/A'}</Title>
                   </Col>
                   <Col span={12}>
-                    <Text type="secondary">Last Updated</Text>
-                    <div>{formatDate(selectedPlayer.updated)}</div>
+                    <Text type="secondary">Возраст</Text>
+                    <Title level={5}>{selectedPlayer.age || 'N/A'}</Title>
+                  </Col>
+                </Row>
+                <Row style={{ marginTop: 16 }}>
+                  <Col span={12}>
+                    <Text type="secondary">Рейтинг 2.0</Text>
+                    <Title level={5}>{selectedPlayer.Rating || 'N/A'}</Title>
+                  </Col>
+                  <Col span={12}>
+                    <Text type="secondary">Дисциплина</Text>
+                    <Title level={5}>{selectedPlayer.Discipline || 'N/A'}</Title>
                   </Col>
                 </Row>
               </Col>
