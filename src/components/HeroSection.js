@@ -32,18 +32,22 @@ const HeroSection = () => {
             <Row gutter={[16, 16]} justify="center">
               <Col xs={24} sm={12}>
                 <Button
-                  type=""
+                  block 
+                  variant="solid"
                   href="https://forms.yandex.ru/cloud/67b02371f47e73d61ea520c8/"
-                  className="register-btn"
+                  style={{backgroundColor: "#FEA202"}}
+                  color="#FEA202"
                 >
                   DOTA 2
                 </Button>
               </Col>
               <Col xs={24} sm={12}>
                 <Button
-                  type=""
+                  block 
+                  variant="solid"
                   href="https://forms.yandex.ru/cloud/67b01cfb02848fd446b03ba8/"
-                  className="register-btn"
+                  color="#FEA202"
+                  style={{backgroundColor: "#FEA202"}}
                 >
                   CS 2
                 </Button>
