@@ -10,7 +10,8 @@ const NewsFeed = () => {
 
   useEffect(() => {
     // Замените на ваш access token и ID паблика
-    const token = 'c4d4f584c4d4f584c4d4f5840bc7fe5167cc4d4c4d4f584a36db98e432a664fd219abb6';
+    // const token = 'c4d4f584c4d4f584c4d4f5840bc7fe5167cc4d4c4d4f584a36db98e432a664fd219abb6';
+    const token = '30f306b730f306b730f306b77133d9a24b330f330f306b7574a494babdcc21eca852617';
     const groupId = '218883068'; // Например, -123456789
     const count = 5; // Количество постов для загрузки
 
