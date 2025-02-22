@@ -8,11 +8,11 @@ const { Title, Paragraph } = Typography;
 const HeroSection = () => {
   return (
     <section className="hero-section">
-      <Row align="middle" justify="center" gutter={[32, 32]}>
-        <Col xs={24} lg={10} className="hero-3-img">
+      <Row align="middle" justify="center" gutter={[16, 16]}>
+        <Col xs={24} lg={12} className="hero-3-img">
           <img src="/assets/esl-react/build/images/head-to-site.png" alt="EMCO.TECH.SPORTS" />
         </Col>
-        <Col xs={24} lg={14}>
+        <Col xs={24} lg={12}>
           <Card className="hero-card text-left" bordered={false}>
             <div className="badge text-white">
               <RocketOutlined className="icon" /> Киберспорт это спорт

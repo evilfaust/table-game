@@ -389,7 +389,7 @@ const columns = [
                     </Col>
                     <Col span={12}>
                     <Text type="secondary">Дисциплина</Text>
-                    <div>{selectedPlayer.Discipline || 'N/A'}</div>
+                    <Title level={5}>{selectedPlayer.Discipline || 'N/A'}</Title>
                     </Col>
                 </Row>
               </Col>

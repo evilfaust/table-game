@@ -56,7 +56,7 @@ code {
 
 
 .hero-3 .hero-3-img img {
-  width: 90%;
+  width: 80%;
   border-radius: 48% 52% 66% 34% / 62% 60% 40% 38%;
   border: 10px solid rgba(255, 255, 255, 0.05);
 }
@@ -106,7 +106,7 @@ code {
 
 .hero-3-img img {
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   border-radius: 48% 52% 66% 34% / 62% 60% 40% 38%;
   border: 10px solid rgba(255, 255, 255, 0.05);
   display: block;
