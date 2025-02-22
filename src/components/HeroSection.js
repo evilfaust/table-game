@@ -10,7 +10,7 @@ const HeroSection = () => {
     <section className="hero-section">
       <Row align="middle" justify="center" gutter={[16, 16]}>
         <Col xs={24} lg={12} className="hero-3-img">
-          <img src="/assets/esl-react/build/images/head-to-site.png" alt="EMCO.TECH.SPORTS" />
+          <img src="/images/head-to-site.png" alt="EMCO.TECH.SPORTS" />
         </Col>
         <Col xs={24} lg={12}>
           <Card className="hero-card text-left" bordered={false}>

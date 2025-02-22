@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col, Divider, Typography } from 'antd';
+import { Row, Col, Typography } from 'antd';
 import { MessageOutlined, EyeOutlined, CheckOutlined } from '@ant-design/icons';
 
 const { Title, Text } = Typography;

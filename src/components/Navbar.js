@@ -24,10 +24,10 @@ const Navbar = () => {
       {/* Логотип */}
       <div className="logo-container" style={{ display: "flex", alignItems: "center", gap: "24px" }}>
         <Link className="logo" to="/">
-          <img src="/assets/esl-react/build/images/esl-logo.png" style={{ height: 24 }} alt="EMCO.TECH.SPORTS" />
+          <img src="/images/esl-logo.png" style={{ height: 24 }} alt="EMCO.TECH.SPORTS" />
         </Link>
         <a href="https://emcotech.site" target="_blank" rel="noopener noreferrer" className="menu-item">
-          <img src="/assets/esl-react/build/images/emco-tech-logo.png" style={{ height: 24 }} alt="EMCO.TECH" />
+          <img src="/images/emco-tech-logo.png" style={{ height: 24 }} alt="EMCO.TECH" />
         </a>
       </div>
 
