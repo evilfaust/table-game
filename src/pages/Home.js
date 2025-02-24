@@ -112,25 +112,6 @@ const Home = () => {
           </Layout.Content>
         )}
        </Layout>
-        {/*{(showTables || showDocuments) && (*/}
-        {/*            <Layout className="docbackground">*/}
-        {/*              <Layout.Content style={{ padding: "10px", width: "80%", margin: "0 auto" }}>*/}
-        {/*                <Row gutter={[16, 16]}>*/}
-        {/*                  {showSchedule && (*/}
-        {/*                      <Col xs={24} md={12} lg={12}>*/}
-        {/*                      <LeagueSchedule />*/}
-        {/*                    </Col>*/}
-        {/*                  )}*/}
-        {/*                  {showDocuments && (*/}
-        {/*                      <Col xs={24} md={12} lg={12}>*/}
-        {/*                      <DocumentsSection />*/}
-        {/*                    </Col>*/}
-        {/*                  )}*/}
-        {/*                </Row>*/}
-        {/*              </Layout.Content>*/}
-        {/*            </Layout>*/}
-        {/*)}*/}
-
         {showSchedule && (
           <Layout className="">
             <Layout.Content style={{ padding: "10px", width: "80%", margin: "0 auto" }}>
@@ -142,7 +123,6 @@ const Home = () => {
             </Layout.Content>
           </Layout>
         )}
-
         {showDocuments && (
           <Layout className="">
             <Layout.Content style={{ padding: "10px", width: "80%", margin: "0 auto" }}>
@@ -165,7 +145,6 @@ const Home = () => {
             </Layout.Content>
           </Layout>
       )}
-
     </>
   );
 };

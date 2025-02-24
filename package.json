@@ -12,12 +12,14 @@
     "axios": "^1.7.9",
     "cors": "^2.8.5",
     "express": "^4.21.2",
+    "framer-motion": "^12.4.7",
     "node-fetch": "^3.3.2",
     "pocketbase": "^0.25.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.2.0",
     "react-scripts": "5.0.1",
+    "react-transition-group": "^4.4.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
