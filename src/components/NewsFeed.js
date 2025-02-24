@@ -12,7 +12,7 @@ const NewsFeed = () => {
   const fetchNews = async () => {
     try {
       setLoading(true);
-      const proxyUrl = 'http://emcotech.site:3050/fetch-news';
+      const proxyUrl = 'https://emcotech.site:3050/fetch-news';
       const response = await fetch(`${proxyUrl}?groupId=218883068&count=50`);
       const data = await response.json();
 
