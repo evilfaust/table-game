@@ -7,9 +7,11 @@ const ContentLink = ({
   onToggleTables,
   onToggleSchedule,
   onToggleDocuments,
+    onToggleNewsFeed,
   tableButtonText,
   scheduleButtonText,
-  documentsButtonText
+  documentsButtonText,
+    newsButtonText
 }) => {
     return (
         <Layout>
@@ -47,7 +49,7 @@ const ContentLink = ({
                             <Meta
                                 avatar={<Avatar shape="square" size={64} src="/images/icon004.png" />}
                                 title="Новости лиги"
-                                description={<Button variant="solid" block href="/news"> Посмотреть </Button>}
+                                description={<Button variant="solid" block onClick={onToggleNewsFeed}>{newsButtonText}</Button>}
                             />
                         </Card>
                     </Col>

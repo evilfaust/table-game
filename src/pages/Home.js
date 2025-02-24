@@ -5,6 +5,7 @@ import TableCS2 from "../components/TableCS2";
 import TableDOTA2 from "../components/TableDOTA2";
 import LeagueSchedule from "../components/LeagueSchedule";
 import DocumentsSection from "../components/DocumentsSection";
+import NewsFeed from "../components/NewsFeed";
 
 const Home = () => {
   const [activeTable, setActiveTable] = useState("CS2");
@@ -14,11 +15,13 @@ const Home = () => {
   const [showTables, setShowTables] = useState(false);
   const [showSchedule, setShowSchedule] = useState(false);
   const [showDocuments, setShowDocuments] = useState(false);
+  const [showNewsFeed, setShowNewsFeed] = useState(false);
 
   // Состояния для текста кнопок
   const [tableButtonText, setTableButtonText] = useState("Посмотреть");
   const [scheduleButtonText, setScheduleButtonText] = useState("Посмотреть");
   const [documentsButtonText, setDocumentsButtonText] = useState("Посмотреть");
+  const [newsButtonText, setNewsButtonText] = useState("Посмотреть");
 
   useEffect(() => {
     const handleResize = () => {
@@ -45,6 +48,11 @@ const Home = () => {
     setDocumentsButtonText(showDocuments ? "Посмотреть" : "Скрыть");
   };
 
+  const handleToggleNewsFeed = () => {
+    setShowNewsFeed(!showNewsFeed);
+    setNewsButtonText(showNewsFeed ? "Посмотреть" : "Скрыть")
+  }
+
   return (
     <>
       <Layout>
@@ -53,9 +61,11 @@ const Home = () => {
             onToggleTables={handleToggleTables}
             onToggleSchedule={handleToggleSchedule}
             onToggleDocuments={handleToggleDocuments}
+            onToggleNewsFeed={handleToggleNewsFeed}
             tableButtonText={tableButtonText}
             scheduleButtonText={scheduleButtonText}
             documentsButtonText={documentsButtonText}
+            newsButtonText={newsButtonText}
           />
         </Layout.Content>
 
@@ -101,49 +111,61 @@ const Home = () => {
             </Row>
           </Layout.Content>
         )}
-        {(showTables || showDocuments) && (
-                    <Layout className="docbackground">
-                      <Layout.Content style={{ padding: "10px", width: "80%", margin: "0 auto" }}>
-                        <Row gutter={[16, 16]}>
-                          {showSchedule && (
-                              <Col xs={24} md={12} lg={12}>
-                              <LeagueSchedule />
-                            </Col>
-                          )}
-                          {showDocuments && (
-                              <Col xs={24} md={12} lg={12}>
-                              <DocumentsSection />
-                            </Col>
-                          )}
-                        </Row>
-                      </Layout.Content>
-                    </Layout>
+       </Layout>
+        {/*{(showTables || showDocuments) && (*/}
+        {/*            <Layout className="docbackground">*/}
+        {/*              <Layout.Content style={{ padding: "10px", width: "80%", margin: "0 auto" }}>*/}
+        {/*                <Row gutter={[16, 16]}>*/}
+        {/*                  {showSchedule && (*/}
+        {/*                      <Col xs={24} md={12} lg={12}>*/}
+        {/*                      <LeagueSchedule />*/}
+        {/*                    </Col>*/}
+        {/*                  )}*/}
+        {/*                  {showDocuments && (*/}
+        {/*                      <Col xs={24} md={12} lg={12}>*/}
+        {/*                      <DocumentsSection />*/}
+        {/*                    </Col>*/}
+        {/*                  )}*/}
+        {/*                </Row>*/}
+        {/*              </Layout.Content>*/}
+        {/*            </Layout>*/}
+        {/*)}*/}
+
+        {showSchedule && (
+          <Layout className="">
+            <Layout.Content style={{ padding: "10px", width: "80%", margin: "0 auto" }}>
+              <Row gutter={[16, 16]} className="">
+                <Col xs={24} md={24} lg={24}>
+                  <LeagueSchedule />
+                </Col>
+              </Row>
+            </Layout.Content>
+          </Layout>
         )}
 
-        {/*{showSchedule && (*/}
-        {/*  <Layout className="docbackground">*/}
-        {/*    <Layout.Content style={{ padding: "10px", width: "80%", margin: "0 auto" }}>*/}
-        {/*      <Row gutter={[16, 16]} className="">*/}
-        {/*        <Col xs={24} md={12} lg={12}>*/}
-        {/*          <LeagueSchedule />*/}
-        {/*        </Col>*/}
-        {/*      </Row>*/}
-        {/*    </Layout.Content>*/}
-        {/*  </Layout>*/}
-        {/*)}*/}
+        {showDocuments && (
+          <Layout className="">
+            <Layout.Content style={{ padding: "10px", width: "80%", margin: "0 auto" }}>
+              <Row gutter={[16, 16]} className="">
+                <Col xs={24} md={24} lg={24}>
+                  <DocumentsSection />
+                </Col>
+              </Row>
+            </Layout.Content>
+          </Layout>
+        )}
+      {showNewsFeed && (
+          <Layout>
+            <Layout.Content style={{ padding: "10px", width: "80%", margin: "0 auto" }}>
+              <Row gutter={[16, 16]} className="">
+                <Col xs={24} md={24} lg={24}>
+                  <NewsFeed />
+                </Col>
+              </Row>
+            </Layout.Content>
+          </Layout>
+      )}
 
-        {/*{showDocuments && (*/}
-        {/*  <Layout className="docbackground">*/}
-        {/*    <Layout.Content style={{ padding: "10px", width: "80%", margin: "0 auto" }}>*/}
-        {/*      <Row gutter={[16, 16]} className="">*/}
-        {/*        <Col xs={24} md={12} lg={12}>*/}
-        {/*          <DocumentsSection />*/}
-        {/*        </Col>*/}
-        {/*      </Row>*/}
-        {/*    </Layout.Content>*/}
-        {/*  </Layout>*/}
-        {/*)}*/}
-      </Layout>
     </>
   );
 };
