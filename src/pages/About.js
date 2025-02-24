@@ -1,12 +1,26 @@
 
+
+import React, { useState, useEffect } from 'react';
+import { Card, Row, Col, Spin, Alert, Modal, Layout } from 'antd';
+import EsportAbout from "../components/EsportAbout";
+import PartnersSection from '../components/PartnersSection';
+
+
 const About = () => {
 
     return (
         <>
-        <h1>ABOUT</h1>
+          <EsportAbout />
+          <Layout>
+            <Layout.Content style={{ padding: "10px", width: "80%", margin: "0 auto" }}>
+              <PartnersSection /> 
+            </Layout.Content>
+          </Layout>
+
         </>
     )
 }
 
 
 export default About
+

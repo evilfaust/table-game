@@ -1,0 +1,37 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  
+  .desktop-menu {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .mobile-menu-button {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .desktop-menu {
+      display: none;
+    }
+    /* @media (max-width: 768px) {
+        .desktop-menu {
+          display: none;
+        }  */
+    .mobile-menu-button {
+      display: block;
+    }
+  }
