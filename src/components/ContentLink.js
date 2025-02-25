@@ -42,7 +42,11 @@ const ContentLink = ({
         { id: 1, title: "Турнирная таблица", icon: "/images/icon001.png", onClick: onToggleTables, buttonText: tableButtonText },
         { id: 2, title: "Календарь лиги", icon: "/images/icon002.png", onClick: onToggleSchedule, buttonText: scheduleButtonText },
         { id: 3, title: "Регламент и правила", icon: "/images/icon003.png", onClick: onToggleDocuments, buttonText: documentsButtonText },
-        { id: 4, title: "Новости лиги", icon: "/images/icon004.png", onClick: onToggleNewsFeed, buttonText: newsButtonText }
+        { id: 4, title: "Новости лиги", icon: "/images/icon004.png", onClick: onToggleNewsFeed, buttonText: newsButtonText },
+        { id: 5, title: "Партнеры лиги", icon: "/images/icon005.png", link: "/about#partneri", buttonText: "Перейти к партнерам" },
+    { id: 6, title: "Итоги ETL4", icon: "/images/icon006.png", link: "/etl4", buttonText: "Посмотреть итоги" },
+    { id: 7, title: "Статистика", icon: "/images/icon007.png", link: "https://example.com/statistics", buttonText: "Открыть статистику" },
+    { id: 8, title: "Киберкаст", icon: "/images/icon008.png", link: "https://example.com/cybercast", buttonText: "Смотреть трансляцию" }
     ];
 
     useEffect(() => {
@@ -189,7 +193,6 @@ const ContentLink = ({
                         100% { transform: translateX(0); opacity: 1; }
                     }
                 `}</style>
-
                 <Row gutter={[16, 16]} style={{ marginBottom: "20px", justifyContent: "center", marginTop: "20px" }}>
                     {cards.map(card => (
                         <Col xs={24} sm={12} md={8} lg={6} key={card.id}>
@@ -205,13 +208,19 @@ const ContentLink = ({
                                     }
                                     title={card.title}
                                     description={
-                                        <Button
+                                    card.link ? (
+                                        <Button href={card.link} variant="solid" block target="_blank" rel="noopener noreferrer">
+                                            {card.buttonText}
+                                          </Button>
+                                        ) : (
+                                            <Button
                                             variant="solid"
                                             block
                                             onClick={card.onClick}
                                         >
                                             {card.buttonText}
                                         </Button>
+                                        )
                                     }
                                 />
                             </Card>
@@ -224,66 +233,3 @@ const ContentLink = ({
 };
 
 export default ContentLink;
-
-// import React from 'react';
-// import { Layout, Card, Avatar, Row, Col, Button } from 'antd';
-//
-// const { Meta } = Card;
-//
-// const ContentLink = ({
-//   onToggleTables,
-//   onToggleSchedule,
-//   onToggleDocuments,
-//     onToggleNewsFeed,
-//   tableButtonText,
-//   scheduleButtonText,
-//   documentsButtonText,
-//     newsButtonText
-// }) => {
-//     return (
-//         <Layout>
-//             <Layout.Content>
-//                 <Row gutten={[16, 16]} style={{ marginBottom: "20px", justifyContent: "center", marginTop: "20px" }}>
-//                     <Col xs={24} sm={12} md={8} lg={6}>
-//                         <Card style={{ width: "98%" }}>
-//                             <Meta
-//                                 avatar={<Avatar shape="square" size={64} src="/images/icon001.png" />}
-//                                 title="Турнирная таблица"
-//                                 description={<Button variant="solid" block onClick={onToggleTables}>{tableButtonText}</Button>}
-//                             />
-//                         </Card>
-//                     </Col>
-//                     <Col xs={24} sm={12} md={8} lg={6}>
-//                         <Card style={{ width: "98%" }}>
-//                             <Meta
-//                                 avatar={<Avatar shape="square" size={64} src="/images/icon002.png" />}
-//                                 title="Календарь лиги"
-//                                 description={<Button variant="solid" block onClick={onToggleSchedule}>{scheduleButtonText}</Button>}
-//                             />
-//                         </Card>
-//                     </Col>
-//                     <Col xs={24} sm={12} md={8} lg={6}>
-//                         <Card style={{ width: "98%" }}>
-//                             <Meta
-//                                 avatar={<Avatar shape="square" size={64} src="/images/icon003.png" />}
-//                                 title="Регламент и правила"
-//                                 description={<Button variant="solid" block onClick={onToggleDocuments}>{documentsButtonText}</Button>}
-//                             />
-//                         </Card>
-//                     </Col>
-//                     <Col xs={24} sm={12} md={8} lg={6}>
-//                         <Card style={{ width: "98%" }}>
-//                             <Meta
-//                                 avatar={<Avatar shape="square" size={64} src="/images/icon004.png" />}
-//                                 title="Новости лиги"
-//                                 description={<Button variant="solid" block onClick={onToggleNewsFeed}>{newsButtonText}</Button>}
-//                             />
-//                         </Card>
-//                     </Col>
-//                 </Row>
-//             </Layout.Content>
-//         </Layout>
-//     );
-// };
-//
-// export default ContentLink;
