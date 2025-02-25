@@ -1,95 +1,76 @@
-.spectacledcoder-footer {
-    position: relative;
-    background: #05b3a4;
-    padding: 20px;
-    text-align: center;
-    color: white;
+.background {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.socials {
+  gap: 20px;
+}
+
+.socials a {
+  font-size: 24px;
+}
+
+.links {
+  gap: 10px;
+}
+
+.legal {
+  font-size: 12px;
+  margin: 0;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scaleY(3) scaleX(2.25);
+  transform-origin: bottom;
+  box-sizing: border-box;
+  display: block;
+  pointer-events: none;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  height: 370px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 30px;
+  padding-bottom: 80px;
+  padding-left: 60px;
+  width: 100%;
+}
+
+@media (width > 420px) {
+  section {
+    align-items: center;
+    padding-left: 0;
+    gap: 20px;
   }
-  
-  .waves {
-    position: relative;
-    width: 100%;
-    height: 100px;
-    margin-bottom: -10px;
-    min-height: 100px;
+
+  .links {
+    gap: 20px;
   }
-  
-  .wave {
-    position: absolute;
-    width: 100%;
-    height: 100px;
-    background: url("https://i.imgur.com/ZAts69f.png") repeat-x;
-    background-size: 1000px 100px;
-  }
-  
-  #wave1 {
-    animation: animateWaves 4s linear infinite;
-    opacity: 1;
-    bottom: 0;
-  }
-  
-  #wave2 {
-    animation: animate 4s linear infinite;
-    opacity: 0.5;
-    bottom: 10px;
-  }
-  
-  #wave3 {
-    animation: animateWaves 3s linear infinite;
-    opacity: 0.2;
-    bottom: 15px;
-  }
-  
-  #wave4 {
-    animation: animate 3s linear infinite;
-    opacity: 0.7;
-    bottom: 20px;
-  }
-  
-  @keyframes animateWaves {
-    0% { background-position-x: 1000px; }
-    100% { background-position-x: 0px; }
-  }
-  
-  @keyframes animate {
-    0% { background-position-x: -1000px; }
-    100% { background-position-x: 0px; }
-  }
-  
-  .d-footer-ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .d-footer-li {
-    margin: 5px 0;
-  }
-  
-  .d-footer-li:hover {
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  .logo {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 10px;
-  }
-  
-  .social-icon {
-    font-size: 24px;
-    color: white;
-    transition: transform 0.3s;
-  }
-  
-  .social-icon:hover {
-    transform: scale(1.2);
-  }
-  
-  .spectacledcoder-footer-bottom {
-    margin-top: 20px;
-    font-size: 0.9rem;
-    opacity: 0.8;
-  }
-  
+}
