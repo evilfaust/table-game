@@ -337,16 +337,17 @@ const columns = [
         width={700}
       >
         {selectedPlayer ? (
-          <Card>
+          <Card >
             <Row gutter={[16, 16]}>
               <Col span={8}>
                 {selectedPlayer.Photo ? (
                   <Avatar
+                    shape="square" 
                     src={getPlayerPhotoUrl(selectedPlayer)}
                     size={128}
                   />
                 ) : (
-                  <Avatar icon={<UserOutlined />} size={128} />
+                  <Avatar shape="square" icon={<UserOutlined />} size={128} />
                 )}
               </Col>
               <Col span={16}>

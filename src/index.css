@@ -179,3 +179,7 @@ code {
   /* background: #162938 url("../public/images/fon001.png") no-repeat center center / cover; */
 
 }
+
+.card-background-img {
+  background: url("../public/images/background-001.png") no-repeat center center / cover;
+}

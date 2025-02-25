@@ -34,6 +34,7 @@ import About from './pages/About';
 import ETL4 from './pages/ETL4';
 import News from './pages/News';
 import HeroSection from "./components/HeroSection";
+import EsportsFooter from './components/EsportsFooter';
 
 function App() {
   return (
@@ -48,6 +49,7 @@ function App() {
           <Route path="/news" element={<News />} />
         </Routes>
       </div>
+      <EsportsFooter />
     </BrowserRouter>
   );
 }

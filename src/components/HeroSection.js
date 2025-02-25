@@ -21,12 +21,12 @@ const HeroSection = () => {
             <Title level={3} className="text-white">
               КИБЕР-СПОРТИВНАЯ <span className="highlight">ЛИГА</span>
             </Title>
-            <div style={{ justifyContent: "center" }}>
+            {/* <div style={{ justifyContent: "center" }}>
               <Avatar shape="square" size={64} src="/images/icon001.png" style={{ marginRight: "5px" }}/>
               <Avatar shape="square" size={64} src="/images/icon002.png" style={{ marginRight: "5px" }}/>
               <Avatar shape="square" size={64} src="/images/icon003.png" style={{ marginRight: "5px" }}/>
               <Avatar shape="square" size={64} src="/images/icon004.png" style={{ marginRight: "5px" }}/>
-            </div>
+            </div> */}
             <Title level={2} className="hero-title-game text-white">
               EMCO.TECH<span className="highlight">.SPORTS</span>
             </Title>
