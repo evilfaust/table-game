@@ -1,6 +1,6 @@
 import React from "react";
 import {Row, Col, Button, Typography, Card} from "antd";
-import { RocketOutlined } from "@ant-design/icons";
+import {RocketFilled, RocketOutlined} from "@ant-design/icons";
 import "antd/dist/reset.css";
 // import {Link} from "react-router-dom";
 
@@ -15,18 +15,12 @@ const HeroSection = () => {
         </Col>
         <Col xs={24} lg={12}>
           <Card className="hero-card text-left" bordered={false}>
-            <div className="badge text-white rubik-mono-one-regular">
-              <RocketOutlined className="icon"/> Киберспорт это спорт
+            <div className="badge text-white roboto-base">
+              <RocketFilled className="icon"/><RocketOutlined className="icon"/> Киберспорт это спорт
             </div>
             <Title level={4} className="text-white rubik-mono-one-regular">
               КИБЕРСПОРТИВНАЯ <span className="highlight">ЛИГА</span>
             </Title>
-            {/* <div style={{ justifyContent: "center" }}>
-              <Avatar shape="square" size={64} src="/images/icon001.png" style={{ marginRight: "5px" }}/>
-              <Avatar shape="square" size={64} src="/images/icon002.png" style={{ marginRight: "5px" }}/>
-              <Avatar shape="square" size={64} src="/images/icon003.png" style={{ marginRight: "5px" }}/>
-              <Avatar shape="square" size={64} src="/images/icon004.png" style={{ marginRight: "5px" }}/>
-            </div> */}
             <Title level={3} className="hero-title-game text-white rubik-mono-one-regular">
               EMCO.TECH<span className="highlight ">.SPORTS</span>
             </Title>
@@ -71,5 +65,4 @@ const HeroSection = () => {
     </section>
   );
 };
-
 export default HeroSection;

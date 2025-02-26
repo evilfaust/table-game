@@ -191,6 +191,16 @@ code {
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rubik+Burned&family=Rubik+Glitch+Pop&family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.roboto-base {
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
 
 .press-start-2p-regular {
   font-family: "Press Start 2P", serif;
