@@ -28,9 +28,9 @@ const Navbar = () => {
       </div>
 
       {/* Меню для десктопа */}
-      <div className="desktop-menu">
+      <div className="desktop-menu ">
         <Link to="/">
-          <Button style={buttonStyle} type="default" ghost>
+          <Button  type="text" ghost className="rubik-mono-one-regular nav-bar-btn">
             Home
           </Button>
         </Link>

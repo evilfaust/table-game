@@ -189,3 +189,30 @@ code {
   bottom: 32px;
   left: 24px;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rubik+Burned&family=Rubik+Glitch+Pop&family=Rubik+Mono+One&display=swap');
+
+.press-start-2p-regular {
+  font-family: "Press Start 2P", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.rubik-burned-regular {
+  font-family: "Rubik Burned", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.rubik-glitch-pop-regular {
+  font-family: "Rubik Glitch Pop", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.rubik-mono-one-regular {
+  font-family: "Rubik Mono One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+

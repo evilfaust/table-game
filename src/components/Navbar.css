@@ -35,3 +35,14 @@
       display: block;
     }
   }
+
+  .nav-bar-btn {
+    color: #FEA202;
+    font-size: 1.2rem;
+  }
+
+  .nav-bar-btn:hover {
+    border-color: #FEA202;
+    color: #FEA202;
+  }
+
