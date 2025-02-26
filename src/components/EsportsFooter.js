@@ -81,27 +81,32 @@ const EsportsFooter = () => {
                 <Avatar shape="square" size={64} src="/images/icon001.png" style={{marginRight: "5px"}}/>
                 <Avatar shape="square" size={64} src="/images/icon002.png" style={{marginRight: "5px"}}/>
                 <Avatar shape="square" size={64} src="/images/icon003.png" style={{marginRight: "5px"}}/>
-                <Avatar shape="square" size={64} src="/images/icon004.png" style={{ marginRight: "5px" }}/>
+                <Avatar shape="square" size={64} src="/images/icon004.png" style={{marginRight: "5px"}}/>
                 <Avatar shape="square" size={64} src="/images/icon005.png" style={{marginRight: "5px"}}/>
                 <Avatar shape="square" size={64} src="/images/icon006.png" style={{marginRight: "5px"}}/>
                 <Avatar shape="square" size={64} src="/images/icon007.png" style={{marginRight: "5px"}}/>
-                <Avatar shape="square" size={64} src="/images/icon008.png" style={{ marginRight: "5px" }}/>
+                <Avatar shape="square" size={64} src="/images/icon008.png" style={{marginRight: "5px"}}/>
                 <Avatar shape="square" size={64} src="/images/icon009.png" style={{marginRight: "5px"}}/>
                 <Avatar shape="square" size={64} src="/images/icon010.png" style={{marginRight: "5px"}}/>
                 <Avatar shape="square" size={64} src="/images/icon011.png" style={{marginRight: "5px"}}/>
-                <Avatar shape="square" size={64} src="/images/icon012.png" style={{ marginRight: "5px" }}/>
+                <Avatar shape="square" size={64} src="/images/icon012.png" style={{marginRight: "5px"}}/>
                 <Avatar shape="square" size={64} src="/images/icon013.png" style={{marginRight: "5px"}}/>
                 <Avatar shape="square" size={64} src="/images/icon014.png" style={{marginRight: "5px"}}/>
                 <Avatar shape="square" size={64} src="/images/icon015.png" style={{marginRight: "5px"}}/>
-                <Avatar shape="square" size={64} src="/images/icon016.png" style={{ marginRight: "5px" }}/>
+                <Avatar shape="square" size={64} src="/images/icon016.png" style={{marginRight: "5px"}}/>
                 <Avatar shape="square" size={64} src="/images/icon017.png" style={{marginRight: "5px"}}/>
                 <Avatar shape="square" size={64} src="/images/icon018.png" style={{marginRight: "5px"}}/>
                 <Avatar shape="square" size={64} src="/images/icon019.png" style={{marginRight: "5px"}}/>
-                <Avatar shape="square" size={64} src="/images/icon020.png" style={{ marginRight: "5px" }}/>
+                <Avatar shape="square" size={64} src="/images/icon020.png" style={{marginRight: "5px"}}/>
                 <Avatar shape="square" size={64} src="/images/icon021.png" style={{marginRight: "5px"}}/>
                 <Avatar shape="square" size={64} src="/images/icon022.png" style={{marginRight: "5px"}}/>
                 <Avatar shape="square" size={64} src="/images/icon023.png" style={{marginRight: "5px"}}/>
-                <Avatar shape="square" size={64} src="/images/icon024.png" style={{ marginRight: "5px" }}/>
+                <Avatar shape="square" size={64} src="/images/icon024.png" style={{marginRight: "5px"}}/>
+                <Avatar shape="square" size={64} src="/images/icon025.png" style={{marginRight: "5px"}}/>
+                <Avatar shape="square" size={64} src="/images/icon026.png" style={{marginRight: "5px"}}/>
+                <Avatar shape="square" size={64} src="/images/icon027.png" style={{marginRight: "5px"}}/>
+                <Avatar shape="square" size={64} src="/images/icon028.png" style={{marginRight: "5px"}}/>
+                <Avatar shape="square" size={64} src="/images/icon029.png" style={{marginRight: "5px"}}/>
             </div>
             </Col>
           </Row>

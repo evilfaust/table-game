@@ -19,7 +19,7 @@ const DocumentsSection = () => {
     },
     {
       title: "Правила DOTA 2",
-      avatar: "/images/icon008.png",
+      avatar: "/images/icon028.png",
       description: "Здесь все что вам нужно знать о правилах лиги относительно DOTA 2",
       button: {
         text: "Смотреть",
@@ -28,7 +28,7 @@ const DocumentsSection = () => {
     },
     {
       title: "Правила CS 2",
-      avatar: "/images/icon009.png",
+      avatar: "/images/icon029.png",
       description: "Здесь все что вам нужно знать о правилах лиги относительно CS 2",
       button: {
         text: "Смотреть",
