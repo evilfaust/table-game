@@ -183,3 +183,9 @@ code {
 .card-background-img {
   background: url("../public/images/background-001.png") no-repeat center center / cover;
 }
+
+.bottomleft {
+  position: relative;
+  bottom: 32px;
+  left: 24px;
+}

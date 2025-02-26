@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Layout, Card, Avatar, Row, Col, Button } from 'antd';
-
+import './contentlink.css'; // CSS для расширенного набора анимаций
 const { Meta } = Card;
 
 const ContentLink = ({
@@ -44,9 +44,9 @@ const ContentLink = ({
         { id: 3, title: "Регламент и правила", icon: "/images/icon003.png", onClick: onToggleDocuments, buttonText: documentsButtonText },
         { id: 4, title: "Новости лиги", icon: "/images/icon004.png", onClick: onToggleNewsFeed, buttonText: newsButtonText },
         { id: 5, title: "Партнеры лиги", icon: "/images/icon005.png", link: "/about#partneri", buttonText: "Перейти к партнерам" },
-    { id: 6, title: "Итоги ETL4", icon: "/images/icon006.png", link: "/etl4", buttonText: "Посмотреть итоги" },
-    { id: 7, title: "Статистика", icon: "/images/icon007.png", link: "https://example.com/statistics", buttonText: "Открыть статистику" },
-    { id: 8, title: "Киберкаст", icon: "/images/icon008.png", link: "https://example.com/cybercast", buttonText: "Смотреть трансляцию" }
+        { id: 6, title: "Итоги ETL4", icon: "/images/icon006.png", link: "/etl4", buttonText: "Посмотреть итоги" },
+        { id: 7, title: "Статистика", icon: "/images/icon007.png", link: "https://example.com/statistics", buttonText: "Открыть статистику" },
+        { id: 8, title: "Киберкаст", icon: "/images/icon008.png", link: "https://example.com/cybercast", buttonText: "Смотреть трансляцию" }
     ];
 
     useEffect(() => {
@@ -90,109 +90,6 @@ const ContentLink = ({
     return (
         <Layout>
             <Layout.Content>
-                {/* CSS для расширенного набора анимаций */}
-                <style jsx global>{`
-                    @keyframes pulse {
-                        0% { transform: scale(1); }
-                        50% { transform: scale(1.2); }
-                        100% { transform: scale(1); }
-                    }
-                    
-                    @keyframes bounce {
-                        0%, 100% { transform: translateY(0); }
-                        50% { transform: translateY(-10px); }
-                    }
-                    
-                    @keyframes shake {
-                        0%, 100% { transform: translateX(0); }
-                        10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
-                        20%, 40%, 60%, 80% { transform: translateX(5px); }
-                    }
-                    
-                    @keyframes rotate360 {
-                        0% { transform: rotate(0deg); }
-                        100% { transform: rotate(360deg); }
-                    }
-                    
-                    @keyframes scale {
-                        0% { transform: scale(1); }
-                        50% { transform: scale(0.8); }
-                        100% { transform: scale(1); }
-                    }
-                    
-                    @keyframes flip {
-                        0% { transform: perspective(400px) rotateY(0); }
-                        100% { transform: perspective(400px) rotateY(360deg); }
-                    }
-                    
-                    @keyframes swing {
-                        20% { transform: rotate(15deg); }
-                        40% { transform: rotate(-10deg); }
-                        60% { transform: rotate(5deg); }
-                        80% { transform: rotate(-5deg); }
-                        100% { transform: rotate(0deg); }
-                    }
-                    
-                    @keyframes wobble {
-                        0% { transform: translateX(0%); }
-                        15% { transform: translateX(-5%) rotate(-5deg); }
-                        30% { transform: translateX(4%) rotate(3deg); }
-                        45% { transform: translateX(-3%) rotate(-3deg); }
-                        60% { transform: translateX(2%) rotate(2deg); }
-                        75% { transform: translateX(-1%) rotate(-1deg); }
-                        100% { transform: translateX(0%); }
-                    }
-                    
-                    @keyframes jello {
-                        0%, 100% { transform: scale3d(1, 1, 1); }
-                        30% { transform: scale3d(1.25, 0.75, 1); }
-                        40% { transform: scale3d(0.75, 1.25, 1); }
-                        50% { transform: scale3d(1.15, 0.85, 1); }
-                        65% { transform: scale3d(0.95, 1.05, 1); }
-                        75% { transform: scale3d(1.05, 0.95, 1); }
-                    }
-                    
-                    @keyframes flash {
-                        0%, 50%, 100% { opacity: 1; }
-                        25%, 75% { opacity: 0.5; }
-                    }
-                    
-                    @keyframes rubberBand {
-                        0% { transform: scale3d(1, 1, 1); }
-                        30% { transform: scale3d(1.25, 0.75, 1); }
-                        40% { transform: scale3d(0.75, 1.25, 1); }
-                        50% { transform: scale3d(1.15, 0.85, 1); }
-                        65% { transform: scale3d(0.95, 1.05, 1); }
-                        75% { transform: scale3d(1.05, 0.95, 1); }
-                        100% { transform: scale3d(1, 1, 1); }
-                    }
-                    
-                    @keyframes tada {
-                        0% { transform: scale(1) rotate(0deg); }
-                        10%, 20% { transform: scale(0.9) rotate(-3deg); }
-                        30%, 50%, 70%, 90% { transform: scale(1.1) rotate(3deg); }
-                        40%, 60%, 80% { transform: scale(1.1) rotate(-3deg); }
-                        100% { transform: scale(1) rotate(0deg); }
-                    }
-                    
-                    @keyframes heartBeat {
-                        0% { transform: scale(1); }
-                        14% { transform: scale(1.3); }
-                        28% { transform: scale(1); }
-                        42% { transform: scale(1.3); }
-                        70% { transform: scale(1); }
-                    }
-                    
-                    @keyframes slideUp {
-                        0% { transform: translateY(10px); opacity: 0; }
-                        100% { transform: translateY(0); opacity: 1; }
-                    }
-                    
-                    @keyframes slideLeft {
-                        0% { transform: translateX(10px); opacity: 0; }
-                        100% { transform: translateX(0); opacity: 1; }
-                    }
-                `}</style>
                 <Row gutter={[16, 16]} style={{ marginBottom: "20px", justifyContent: "center", marginTop: "20px" }}>
                     {cards.map(card => (
                         <Col xs={24} sm={12} md={8} lg={6} key={card.id}>

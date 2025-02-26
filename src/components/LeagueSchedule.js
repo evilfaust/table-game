@@ -1,8 +1,8 @@
 import React from 'react';
-import {Row, Col, Typography, Divider, Card, Avatar} from 'antd';
+import {Row, Col, Typography, Card, Avatar} from 'antd';
 
 const { Title } = Typography;
-const { Meta } = Card;
+// const { Meta } = Card;
 // Компонент расписания лиги
 const LeagueSchedule = () => {
   const scheduleItems = [

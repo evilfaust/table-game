@@ -1,27 +1,27 @@
 import React from 'react';
-import {Row, Col, Typography, Divider, Layout, Card, Avatar} from 'antd';
-import { MessageOutlined, EyeOutlined, CheckOutlined } from '@ant-design/icons';
+import {Row, Col, Typography, Layout, Card, Avatar} from 'antd';
+// import { MessageOutlined, EyeOutlined, CheckOutlined } from '@ant-design/icons';
 
 import LeagueSchedule from '../components/LeagueSchedule';
 import DocumentsSection from '../components/DocumentsSection';
 
-const { Meta } = Card;
+// const { Meta } = Card;
 const { Title, Text } = Typography;
 
 // Карточка для Миссии, Видения и Целей
-const MissionVisionGoalCard = ({ icon, title, description }) => (
-  <Col md={8} xs={24} className="mt-5">
-    <div className="about-icon" style={{ display: 'flex', justifyContent: 'center' }}>
-      {icon}
-    </div>
-    <Title level={3} style={{ marginTop: 16, textAlign: 'center' }}>
-      {title}
-    </Title>
-    <Text style={{ textAlign: 'center', color: '#666', lineHeight: '1.6' }}>
-      {description}
-    </Text>
-  </Col>
-);
+// const MissionVisionGoalCard = ({ icon, title, description }) => (
+//   <Col md={8} xs={24} className="mt-5">
+//     <div className="about-icon" style={{ display: 'flex', justifyContent: 'center' }}>
+//       {icon}
+//     </div>
+//     <Title level={3} style={{ marginTop: 16, textAlign: 'center' }}>
+//       {title}
+//     </Title>
+//     <Text style={{ textAlign: 'center', color: '#666', lineHeight: '1.6' }}>
+//       {description}
+//     </Text>
+//   </Col>
+// );
 
 // Основной компонент
 const EsportAboutSection = () => {

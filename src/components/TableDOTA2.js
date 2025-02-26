@@ -342,11 +342,12 @@ const columns = [
               <Col span={8}>
                 {selectedPlayer.Photo ? (
                   <Avatar
+                    shape="square"
                     src={getPlayerPhotoUrl(selectedPlayer)}
                     size={128}
                   />
                 ) : (
-                  <Avatar icon={<UserOutlined />} size={128} />
+                  <Avatar icon={<UserOutlined />} shape="square" size={128} />
                 )}
               </Col>
               <Col span={16}>

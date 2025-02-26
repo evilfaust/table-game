@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Row, Col, Card, Modal, Button } from 'antd';
+import { Row, Col, Card, Modal, Button, Typography } from 'antd';
 import { LeftOutlined, RightOutlined, CloseOutlined } from '@ant-design/icons';
 // import 'antd/dist/antd.css'; // Импортируйте стили Ant Design
 import imagesETL4 from './imagesetl4'; // Импортируем данные изображений
-
+const { Title } = Typography; 
 const Gallery = () => {
   // Используем импортированный массив изображений
   const images = imagesETL4;
@@ -64,6 +64,9 @@ const Gallery = () => {
   return (
     <div className="container" style={{ padding: '20px' }}>
       <Row gutter={[16, 16]}>
+        <Col lg={24} sm={24} xs={24} md={24} >
+        <Title level={2} style={{textAlign: "center"}}>Фотоотчет с финала ETL4</Title>
+        </Col>
         {images.map((image, index) => (
           <Col key={index} xs={24} sm={12} md={8} lg={6}>
             <Card
