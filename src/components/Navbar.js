@@ -35,22 +35,22 @@ const Navbar = () => {
           </Button>
         </Link>
         <Link to="/about">
-          <Button style={buttonStyle} type="default" ghost>
+          <Button type="text" ghost className="rubik-mono-one-regular nav-bar-btn">
             About
           </Button>
         </Link>
         <Link to="/etl4">
-          <Button style={buttonStyle} type="default" ghost>
+          <Button type="text" ghost className="rubik-mono-one-regular nav-bar-btn">
             ETL4
           </Button>
         </Link>
         <Link to="/news">
-          <Button style={buttonStyle} type="default" ghost>
+          <Button type="text" ghost className="rubik-mono-one-regular nav-bar-btn">
             News
           </Button>
         </Link>
         <a href="https://emcotech.site" target="_blank" rel="noopener noreferrer">
-          <Button style={buttonStyle} type="default" ghost>
+          <Button type="text" ghost className="rubik-mono-one-regular nav-bar-btn">
             EMCO TECH <span style={{ fontSize: "0.8em", marginLeft: "3px" }}>↗</span>
           </Button>
         </a>
