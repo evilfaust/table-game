@@ -1,6 +1,6 @@
 import React from "react";
 import {Row, Col, Button, Typography, Card} from "antd";
-import {RocketFilled, RocketOutlined} from "@ant-design/icons";
+import {RocketFilled} from "@ant-design/icons";
 import "antd/dist/reset.css";
 // import {Link} from "react-router-dom";
 
@@ -16,24 +16,28 @@ const HeroSection = () => {
         <Col xs={24} lg={12}>
           <Card className="hero-card text-left" bordered={false}>
             <div className="badge text-white roboto-base">
-              <RocketFilled className="icon"/><RocketOutlined className="icon"/> Киберспорт это спорт
+              <RocketFilled className="icon"/> Киберспорт это спорт
             </div>
-            <Title level={4} className="text-white rubik-mono-one-regular">
+            <Title level={4} className="text-white roboto-base">
               КИБЕРСПОРТИВНАЯ <span className="highlight">ЛИГА</span>
             </Title>
-            <Title level={3} className="hero-title-game text-white rubik-mono-one-regular">
+            <Title level={3} className="hero-title-game text-white roboto-base">
               EMCO.TECH<span className="highlight ">.SPORTS</span>
             </Title>
-            <Paragraph className="text-white rubik-mono-one-regular">
-              Дисциплины: DOTA 2, CS2
+            <Paragraph className="text-white roboto-base">
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+              <span>Дисциплины: </span>
+              <img src="/images/cs2-logo.png" alt="CS2" style={{height: "32px"}} />
+              <img src="/images/dota2-logo.png" alt="DOTA2" style={{height: "32px"}} />
+            </div>
             </Paragraph>
             <Title level={3} className="text-center">
-              <span className="highlight rubik-mono-one-regular">РЕГИСТРАЦИЯ</span>
+              <span className="highlight roboto-base">РЕГИСТРАЦИЯ</span>
             </Title>
             <Row gutter={[16, 16]} justify="center">
               <Col xs={24} sm={12}>
                 <Button
-                    className="rubik-mono-one-regular"
+                    className="roboto-base"
                     block
                     variant="solid"
                     href="https://forms.yandex.ru/cloud/67b02371f47e73d61ea520c8/"
@@ -45,7 +49,7 @@ const HeroSection = () => {
               </Col>
               <Col xs={24} sm={12}>
                 <Button
-                className="rubik-mono-one-regular"
+                className="roboto-base"
                     block
                     variant="solid"
                     href="https://forms.yandex.ru/cloud/67b01cfb02848fd446b03ba8/"

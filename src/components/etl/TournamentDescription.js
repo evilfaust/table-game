@@ -73,7 +73,7 @@ const TournamentDescription = () => {
                   — следите за новостями и готовьтесь к участию!
                 </Paragraph>
               </Col>
-              <Col span={12}>
+              <Col span={24} style={{textAlign: "center"}}>
                 <a href="https://vk.com/emco.tech.sports">Стань частью киберспортивного движения с EMCO.TECH.SPORTS!</a>
               </Col>
             </Row>

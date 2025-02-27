@@ -14,7 +14,7 @@ const DocumentsSection = () => {
       description: "Здесь собраны общие положения и правила проведения лиги",
       button: {
         text: "Общие положения",
-        href: "assets/emcotech/esport/doc/esl1/emco-tech-sports-esl.pdf",
+        href: "https://emcotech.site/assets/emcotech/esport/doc/esl1/emco-tech-sports-esl.pdf",
       },
     },
     {
@@ -23,7 +23,7 @@ const DocumentsSection = () => {
       description: "Здесь все что вам нужно знать о правилах лиги относительно DOTA 2",
       button: {
         text: "Смотреть",
-        href: "assets/emcotech/esport/doc/esl1/reglament-esl-dota-2.pdf",
+        href: "https://emcotech.site/assets/emcotech/esport/doc/esl1/reglament-esl-dota-2.pdf",
       },
     },
     {
@@ -32,7 +32,7 @@ const DocumentsSection = () => {
       description: "Здесь все что вам нужно знать о правилах лиги относительно CS 2",
       button: {
         text: "Смотреть",
-        href: "assets/emcotech/esport/doc/esl1/reglament-cs-2.pdf",
+        href: "https://emcotech.site/assets/emcotech/esport/doc/esl1/reglament-cs-2.pdf",
       },
     },
   ];

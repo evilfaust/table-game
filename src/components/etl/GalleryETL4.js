@@ -62,7 +62,7 @@ const Gallery = () => {
   };
 // https://emcotech.site/img/etl4/0p2a4549.jpg
   return (
-    <div className="container" style={{ padding: '20px' }}>
+    <div className="container" style={{ padding: '20px'}}>
       <Row gutter={[16, 16]}>
         <Col lg={24} sm={24} xs={24} md={24} >
         <Title level={2} style={{textAlign: "center"}}>Фотоотчет с финала ETL4</Title>

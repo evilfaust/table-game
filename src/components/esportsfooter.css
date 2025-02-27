@@ -37,36 +37,6 @@
   align-items: center;
   position: relative;
 }
-/*.footer .content a, .footer .content p {*/
-/*  color: #F5F7FA;*/
-/*  text-decoration: none;*/
-/*}*/
-/*.footer .content b {*/
-/*  color: white;*/
-/*}*/
-/*.footer .content p {*/
-/*  margin: 0;*/
-/*  font-size: 0.75rem;*/
-/*}*/
-/*.footer .content > div {*/
-/*  display: flex;*/
-/*  flex-direction: column;*/
-/*  justify-content: center;*/
-/*}*/
-/*.footer .content > div > div {*/
-/*  margin: 0.25rem 0;*/
-/*}*/
-/*.footer .content > div > div > * {*/
-/*  margin-right: 0.5rem;*/
-/*}*/
-/*.footer .content > div .image {*/
-/*  align-self: center;*/
-/*  width: 4rem;*/
-/*  height: 4rem;*/
-/*  margin: 0.25rem 0;*/
-/*  background-size: cover;*/
-/*  background-position: center;*/
-/*}*/
 
 @-webkit-keyframes bubble-size {
   0%, 75% {

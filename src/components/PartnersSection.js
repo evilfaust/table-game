@@ -53,7 +53,7 @@ const PartnersSection = () => {
   }
 
   return (
-    <section id="partneri">
+    <section id="partneri" >
       <Row justify="center" align="middle" style={{ padding: '50px 0' }}>
         <Col span={20}>
           <Row justify="center" gutter={[16, 16]}>

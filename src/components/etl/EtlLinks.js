@@ -48,14 +48,14 @@ const EtlLink = ({
 
     // Данные о карточках
     const cards = [
-        { id: 1, title: "ETL 1", description: "Март 2023", icon: "/images/icon-etl-001.png", onClick: onToggleETL1, buttonText: etl1ButtonText, active: true },
+        { id: 1, title: "ETL 1", description: "Март 2023", icon: "/images/icon-etl-001.png", onClick: onToggleETL1, buttonText: etl1ButtonText, active: false },
         { id: 2, title: "ETL 2", description: "Декабрь 2024", icon: "/images/icon-etl-002.png", onClick: onToggleETL2, buttonText: etl2ButtonText, active: true },
         { id: 3, title: "ETL 3", description: "Март-апрель 2024", icon: "/images/icon-etl-003.png", onClick: onToggleETL3, buttonText: etl3ButtonText, active: true },
         { id: 4, title: "ETL 4", description: "Ноябрь-февраль 2024/25", icon: "/images/icon-etl-004.png", onClick: onToggleETL4, buttonText: etl4ButtonText, active: true },
-        { id: 5, title: "ETL 5", description: "Декабрь 2025", icon: "/images/icon-etl-001.png", onClick: onToggleETL5, buttonText: etl5ButtonText || "Скоро", active: false },
-        { id: 6, title: "ETL 6", description: "скоро...", icon: "/images/icon-etl-002.png", onClick: onToggleETL6, buttonText: etl6ButtonText || "Скоро", active: false },
-        { id: 7, title: "ETL 7", description: "скоро...", icon: "/images/icon-etl-003.png", onClick: onToggleETL7, buttonText: etl7ButtonText || "Скоро", active: false },
-        { id: 8, title: "ETL 8", description: "скоро...", icon: "/images/icon-etl-004.png", onClick: onToggleETL8, buttonText: etl8ButtonText || "Скоро", active: false }
+        { id: 5, title: "ETL 5", description: "Декабрь 2025", icon: "/images/icon-etl-005.png", onClick: onToggleETL5, buttonText: etl5ButtonText || "Скоро", active: false },
+        { id: 6, title: "ETL 6", description: "скоро...", icon: "/images/icon-etl-006.png", onClick: onToggleETL6, buttonText: etl6ButtonText || "Скоро", active: false },
+        { id: 7, title: "ETL 7", description: "скоро...", icon: "/images/icon-etl-007.png", onClick: onToggleETL7, buttonText: etl7ButtonText || "Скоро", active: false },
+        { id: 8, title: "ETL 8", description: "скоро...", icon: "/images/icon-etl-008.png", onClick: onToggleETL8, buttonText: etl8ButtonText || "Скоро", active: false }
     ];
 
     useEffect(() => {
