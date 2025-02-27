@@ -1,7 +1,10 @@
 import React from "react";
-import {Avatar, Col, Layout, Row} from "antd";
+import {Avatar, Col, Layout, Row, Typography} from "antd";
 import "./esportsfooter.css";
 import {Link} from "react-router-dom";
+// import { Typography, Card, Avatar, Row, Col, Divider } from 'antd';
+
+const { Title, Text } = Typography;
 
 const EsportsFooter = () => {
   return (
@@ -67,16 +70,83 @@ const EsportsFooter = () => {
                   <img src="/images/emco-tech-logo.png" style={{height: 24}} alt="EMCO.TECH"/>
                 </a>
               </div>
+              <Text className="text-white">© EMCO.TECH.SPORTS, 2025. Все права защищены.</Text>
             </Col>
-            <Col xs={24} md={24} lg={6}>
-              <div style={{justifyContent: "center"}}>
-                <Avatar shape="square" size={64} src="/images/icon001.png" style={{marginRight: "5px"}}/>
-                <Avatar shape="square" size={64} src="/images/icon002.png" style={{marginRight: "5px"}}/>
-                <Avatar shape="square" size={64} src="/images/icon003.png" style={{marginRight: "5px"}}/>
-                <Avatar shape="square" size={64} src="/images/icon004.png" style={{marginRight: "5px"}}/>
+            <Col xs={24} md={24} lg={18}>
+            <Row gutter={[16, 16]}>
+              <Col xs={24} md={24} lg={4}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <Avatar shape="square" size={32} src="/images/icon002.png" />
+                <Title level={4} className="text-white roboto-base" style={{ margin: 0, fontSize: "14px" }} >
+                  <Link to="/" className="text-white">HOME</Link>
+                </Title>
               </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <Avatar shape="square" size={32} src="/images/icon007.png" />
+                <Title level={4} className="text-white roboto-base" style={{ margin: 0, fontSize: "14px" }} >
+                  <Link to="/about" className="text-white">ABOUT</Link>
+                </Title>
+              </div>
+              </Col>
+              <Col xs={24} md={24} lg={4}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <Avatar shape="square" size={32} src="/images/icon003.png" />
+                <Title level={4} className="text-white roboto-base" style={{ margin: 0, fontSize: "14px" }} >
+                  <Link to="/etl" className="text-white">ETL</Link>
+                </Title>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <Avatar shape="square" size={32} src="/images/icon006.png" />
+                <Title level={4} className="text-white roboto-base" style={{ margin: 0, fontSize: "14px" }} >
+                  <Link to="/news" className="text-white">NEWS</Link>
+                </Title>
+              </div>
+              </Col>
+              <Col xs={24} md={24} lg={4}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <Avatar shape="square" size={32} src="/images/icon007.png" />
+                <Title level={4} className="text-white roboto-base" style={{ margin: 0, fontSize: "14px" }} >
+                  <a href="https://emcotech.site" className="text-white"  target="_blank" rel="noopener noreferrer" >EMCO.TECH</a>
+                </Title>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <Avatar shape="square" size={32} src="/images/media-icon-vk.png" />
+                <Title level={4} className="text-white roboto-base" style={{ margin: 0, fontSize: "14px" }} >
+                  <a href="https://vk.com/emco.tech.sport" className="text-white" target="_blank" rel="noopener noreferrer" >EMCO.TECH.SPORTS</a>
+                </Title>
+              </div>
+              </Col>
+              <Col xs={24} md={24} lg={4}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <Avatar shape="square" size={32} src="/images/media-icon-tg.png" />
+                <Title level={4} className="text-white roboto-base" style={{ margin: 0, fontSize: "14px" }} >
+                  <a href="https://t.me/emco_tech" className="text-white" target="_blank" rel="noopener noreferrer" >EMCO.TECH</a>
+                </Title>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <Avatar shape="square" size={32} src="/images/media-icon-tg.png" />
+                <Title level={4} className="text-white roboto-base" style={{ margin: 0, fontSize: "14px" }} >
+                  <a href="https://t.me/emcotechsports65" className="text-white" target="_blank" rel="noopener noreferrer" >EMCO.TECH.SPORTS</a>
+                </Title>
+              </div>
+              </Col>
+              <Col xs={24} md={24} lg={5}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <Avatar shape="square" size={32} src="/images/media-icon-phone.png" />
+                <Title level={4} className="text-white roboto-base" style={{ margin: 0, fontSize: "14px" }} >
+                  <a href="tel:+79006642202" className="text-white" target="_blank" rel="noopener noreferrer" >+7 (900) 664 22-02</a>
+                </Title>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <Avatar shape="square" size={32} src="/images/media-icon-email.png" />
+                <Title level={4} className="text-white roboto-base" style={{ margin: 0, fontSize: "14px" }} >
+                  <a href="mailto:emco.tech.sports@eastmining.ru" className="text-white" target="_blank" rel="noopener noreferrer" >emco.tech.sports@eastmining.ru</a>
+                </Title>
+              </div>
+              </Col>
+            </Row>
             </Col>
-            <Col xs={24} md={24} lg={12}>
+            {/* <Col xs={24} md={24} lg={12}>
               <div style={{justifyContent: "center"}}>
                 <Avatar shape="square" size={64} src="/images/icon001.png" style={{marginRight: "5px"}}/>
                 <Avatar shape="square" size={64} src="/images/icon002.png" style={{marginRight: "5px"}}/>
@@ -108,7 +178,7 @@ const EsportsFooter = () => {
                 <Avatar shape="square" size={64} src="/images/icon028.png" style={{marginRight: "5px"}}/>
                 <Avatar shape="square" size={64} src="/images/icon029.png" style={{marginRight: "5px"}}/>
             </div>
-            </Col>
+            </Col> */}
           </Row>
         </Layout.Content>
       </Layout>
