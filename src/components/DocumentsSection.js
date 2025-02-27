@@ -11,16 +11,16 @@ const DocumentsSection = () => {
     {
       title: "Общие положения",
       avatar: "/images/icon010.png",
-      description: "Здесь собраны общие положения и правила проведения лиги",
+      description: "",
       button: {
-        text: "Общие положения",
+        text: "Смотреть",
         href: "https://emcotech.site/assets/emcotech/esport/doc/esl1/emco-tech-sports-esl.pdf",
       },
     },
     {
       title: "Правила DOTA 2",
       avatar: "/images/icon028.png",
-      description: "Здесь все что вам нужно знать о правилах лиги относительно DOTA 2",
+      description: "",
       button: {
         text: "Смотреть",
         href: "https://emcotech.site/assets/emcotech/esport/doc/esl1/reglament-esl-dota-2.pdf",
@@ -29,7 +29,7 @@ const DocumentsSection = () => {
     {
       title: "Правила CS 2",
       avatar: "/images/icon029.png",
-      description: "Здесь все что вам нужно знать о правилах лиги относительно CS 2",
+      description: "",
       button: {
         text: "Смотреть",
         href: "https://emcotech.site/assets/emcotech/esport/doc/esl1/reglament-cs-2.pdf",
