@@ -38,7 +38,7 @@ const Navbar = () => {
         <Link className="logo" to="/">
           <img src="/images/esl-logo.png" style={{ height: 24 }} alt="EMCO.TECH.SPORTS" />
         </Link>
-        <a href="https://emcotech.site" target="_blank" rel="noopener noreferrer" className="menu-item">
+        <a href="https://emcotech.site" className="menu-item">
           <img src="/images/emco-tech-logo.png" style={{ height: 24 }} alt="EMCO.TECH" />
         </a>
       </div>
@@ -81,7 +81,7 @@ const Navbar = () => {
             News
           </Button>
         </Link>
-        <a href="https://emcotech.site" target="_blank" rel="noopener noreferrer">
+        <a href="https://emcotech.site" >
           <Button
             type="text"
             ghost
@@ -145,7 +145,7 @@ const Navbar = () => {
             News
           </Button>
         </Link>
-        <a href="https://emcotech.site" target="_blank" rel="noopener noreferrer" onClick={closeDrawer}>
+        <a href="https://emcotech.site" onClick={closeDrawer}>
           <Button
             style={buttonStyle}
             type="default"

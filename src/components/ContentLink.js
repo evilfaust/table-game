@@ -65,7 +65,7 @@ const ContentLink = ({
 
     // Данные о карточках
     const cards = [
-        { id: 1, title: "Турнирная таблица", icon: "/images/icon001.png", onClick: onToggleTables, buttonText: tableButtonText, openInNewTab: false  },
+        { id: 1, title: "Рейтинговая таблица", icon: "/images/icon001.png", onClick: onToggleTables, buttonText: tableButtonText, openInNewTab: false  },
         { id: 2, title: "Календарь лиги", icon: "/images/icon002.png", onClick: onToggleSchedule, buttonText: scheduleButtonText, openInNewTab: false  },
         { id: 3, title: "Регламент и правила", icon: "/images/icon003.png", onClick: onToggleDocuments, buttonText: documentsButtonText, openInNewTab: false  },
         { id: 4, title: "Новости лиги", icon: "/images/icon004.png", onClick: onToggleNewsFeed, buttonText: newsButtonText, openInNewTab: false  },

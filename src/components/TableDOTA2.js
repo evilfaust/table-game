@@ -308,7 +308,7 @@ const columns = [
   return (
     <div style={{ width: '100%' }}>
       <Title level={2} className="text-center">
-        <TrophyOutlined /> ESL 2025 Турнирная таблица DOTA 2
+        <TrophyOutlined /> ESL 2025 Рейтинговая таблица DOTA 2
       </Title>
 
       <Table

@@ -84,7 +84,7 @@ const Home = () => {
                   }}
                   onClick={() => setActiveTable("CS2")}
                 >
-                  {isMobile ? "CS 2" : "Турнирная таблица CS 2"}
+                  {isMobile ? "CS 2" : "Рейтинговая таблица CS 2"}
                 </Button>
               </Col>
               <Col span={6}>
@@ -96,7 +96,7 @@ const Home = () => {
                   }}
                   onClick={() => setActiveTable("DOTA2")}
                 >
-                  {isMobile ? "DOTA 2" : "Турнирная таблица DOTA 2"}
+                  {isMobile ? "DOTA 2" : "Рейтинговая таблица DOTA 2"}
                 </Button>
               </Col>
             </Row>
