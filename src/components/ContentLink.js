@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Layout, Card, Avatar, Row, Col, Button } from 'antd';
+import { useMediaQuery } from 'react-responsive';
 import './contentlink.css'; // CSS для расширенного набора анимаций
 import { getLatestKibercastLink } from './getLatestKibercastLink';
 const { Meta } = Card;
@@ -12,8 +13,12 @@ const ContentLink = ({
   tableButtonText,
   scheduleButtonText,
   documentsButtonText,
-  newsButtonText
+  newsButtonText,
+  activeSection,
+  showCards
 }) => {
+    const isMobile = useMediaQuery({ maxWidth: 768 });
+    
     // Получение ссылки на последний киберкаст
     const [kibercastLink, setKibercastLink] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -65,14 +70,14 @@ const ContentLink = ({
 
     // Данные о карточках
     const cards = [
-        { id: 1, title: "Рейтинговая таблица", icon: "/images/icon001.png", onClick: onToggleTables, buttonText: tableButtonText, openInNewTab: false  },
-        { id: 2, title: "Календарь лиги", icon: "/images/icon002.png", onClick: onToggleSchedule, buttonText: scheduleButtonText, openInNewTab: false  },
-        { id: 3, title: "Регламент и правила", icon: "/images/icon003.png", onClick: onToggleDocuments, buttonText: documentsButtonText, openInNewTab: false  },
-        { id: 4, title: "Новости лиги", icon: "/images/icon004.png", onClick: onToggleNewsFeed, buttonText: newsButtonText, openInNewTab: false  },
-        { id: 5, title: "Партнеры лиги", icon: "/images/icon005.png", link: "/about#partneri", buttonText: "Перейти", openInNewTab: false  },
-        { id: 6, title: "Отчеты с ETL", icon: "/images/icon006.png", link: "/etl", buttonText: "Смотреть отчеты", openInNewTab: false  },
-        { id: 7, title: "Статистика", icon: "/images/icon007.png", link: "#", buttonText: "Открыть статистику", openInNewTab: true  },
-        { id: 8, title: "Киберкаст", icon: "/images/icon008.png", link: kibercastLink?.link || "#", buttonText: "Перейти к киберкасту", openInNewTab: true  }
+        { id: 1, section: 'tables', title: "Рейтинговая таблица", icon: "/images/icon001.png", onClick: onToggleTables, buttonText: tableButtonText, openInNewTab: false  },
+        { id: 2, section: 'schedule', title: "Календарь лиги", icon: "/images/icon002.png", onClick: onToggleSchedule, buttonText: scheduleButtonText, openInNewTab: false  },
+        { id: 3, section: 'documents', title: "Регламент и правила", icon: "/images/icon003.png", onClick: onToggleDocuments, buttonText: documentsButtonText, openInNewTab: false  },
+        { id: 4, section: 'newsfeed', title: "Новости лиги", icon: "/images/icon004.png", onClick: onToggleNewsFeed, buttonText: newsButtonText, openInNewTab: false  },
+        { id: 5, section: 'partners', title: "Партнеры лиги", icon: "/images/icon005.png", link: "/about#partneri", buttonText: "Перейти", openInNewTab: false  },
+        { id: 6, section: 'etl', title: "Отчеты с ETL", icon: "/images/icon006.png", link: "/etl", buttonText: "Смотреть отчеты", openInNewTab: false  },
+        { id: 7, section: 'stats', title: "Статистика", icon: "/images/icon007.png", link: "#", buttonText: "Открыть статистику", openInNewTab: true  },
+        { id: 8, section: 'kibercast', title: "Киберкаст", icon: "/images/icon008.png", link: kibercastLink?.link || "#", buttonText: "Перейти к киберкасту", openInNewTab: true  }
     ];
 
     useEffect(() => {
@@ -113,11 +118,17 @@ const ContentLink = ({
         return {};
     };
 
+    // Определяем, нужно ли показывать карточки
+    const shouldShowCards = !isMobile || (isMobile && showCards);
+    
+    // Фильтруем карточки для отображения
+    const visibleCards = shouldShowCards ? cards : [];
+
     return (
         <Layout>
             <Layout.Content>
                 <Row gutter={[16, 16]} style={{ marginBottom: "20px", justifyContent: "center", marginTop: "20px" }}>
-                    {cards.map(card => {
+                    {visibleCards.map(card => {
                         // Проверяем, является ли это карточкой киберкаста и загружена ли ссылка
                         const isKibercast = card.id === 8;
                         const isKibercastLoading = isKibercast && loading;
@@ -159,7 +170,7 @@ const ContentLink = ({
                                                 <Button
                                                     variant="solid"
                                                     block
-                                                    onClick={card.onClick}
+                                                    onClick={() => card.onClick(card.section)}
                                                 >
                                                     {card.buttonText}
                                                 </Button>
@@ -246,14 +257,14 @@ export default ContentLink;
 
 //     // Данные о карточках
 //     const cards = [
-//         { id: 1, title: "Турнирная таблица", icon: "/images/icon001.png", onClick: onToggleTables, buttonText: tableButtonText, openInNewTab: false  },
+//         { id: 1, title: "Рейтинговая таблица", icon: "/images/icon001.png", onClick: onToggleTables, buttonText: tableButtonText, openInNewTab: false  },
 //         { id: 2, title: "Календарь лиги", icon: "/images/icon002.png", onClick: onToggleSchedule, buttonText: scheduleButtonText, openInNewTab: false  },
 //         { id: 3, title: "Регламент и правила", icon: "/images/icon003.png", onClick: onToggleDocuments, buttonText: documentsButtonText, openInNewTab: false  },
 //         { id: 4, title: "Новости лиги", icon: "/images/icon004.png", onClick: onToggleNewsFeed, buttonText: newsButtonText, openInNewTab: false  },
 //         { id: 5, title: "Партнеры лиги", icon: "/images/icon005.png", link: "/about#partneri", buttonText: "Перейти", openInNewTab: false  },
 //         { id: 6, title: "Отчеты с ETL", icon: "/images/icon006.png", link: "/etl", buttonText: "Смотреть отчеты", openInNewTab: false  },
-//         { id: 7, title: "Статистика", icon: "/images/icon007.png", link: "https://example.com/statistics", buttonText: "Открыть статистику", openInNewTab: true  },
-//         { id: 8, title: "Киберкаст", icon: "/images/icon008.png", link: {kibercastLink.link} , buttonText: "Смотреть трансляцию", openInNewTab: true  }
+//         { id: 7, title: "Статистика", icon: "/images/icon007.png", link: "#", buttonText: "Открыть статистику", openInNewTab: true  },
+//         { id: 8, title: "Киберкаст", icon: "/images/icon008.png", link: kibercastLink?.link || "#", buttonText: "Перейти к киберкасту", openInNewTab: true  }
 //     ];
 
 //     useEffect(() => {
@@ -283,7 +294,7 @@ export default ContentLink;
 
 //         // Очищаем интервал при размонтировании компонента
 //         return () => clearInterval(intervalId);
-//     }, []);
+//     }, [cards]);
 
 //     // Получаем стиль анимации для текущей аватарки
 //     const getAnimationStyle = (cardId) => {
@@ -298,44 +309,59 @@ export default ContentLink;
 //         <Layout>
 //             <Layout.Content>
 //                 <Row gutter={[16, 16]} style={{ marginBottom: "20px", justifyContent: "center", marginTop: "20px" }}>
-//                     {cards.map(card => (
-//                         <Col xs={24} sm={12} md={8} lg={6} key={card.id}>
-//                             <Card style={{ width: "98%" }}>
-//                                 <Meta
-//                                     avatar={
-//                                         <Avatar
-//                                             shape="square"
-//                                             size={64}
-//                                             src={card.icon}
-//                                             style={getAnimationStyle(card.id)}
-//                                         />
-//                                     }
-//                                     title={card.title}
-//                                     description={
-//                                     card.link ? (
-//                                         <Button 
-//                                         href={card.link} 
-//                                         variant="solid" 
-//                                         block 
-//                                         target={card.openInNewTab ? "_blank" : undefined}
-//                                         rel={card.openInNewTab ? "noopener noreferrer" : undefined}
-//                                         >
-//                                             {card.buttonText}
-//                                           </Button>
-//                                         ) : (
-//                                             <Button
-//                                             variant="solid"
-//                                             block
-//                                             onClick={card.onClick}
-//                                         >
-//                                             {card.buttonText}
-//                                         </Button>
-//                                         )
-//                                     }
-//                                 />
-//                             </Card>
-//                         </Col>
-//                     ))}
+//                     {cards.map(card => {
+//                         // Проверяем, является ли это карточкой киберкаста и загружена ли ссылка
+//                         const isKibercast = card.id === 8;
+//                         const isKibercastLoading = isKibercast && loading;
+//                         const isKibercastError = isKibercast && error;
+                        
+//                         return (
+//                             <Col xs={24} sm={12} md={8} lg={6} key={card.id}>
+//                                 <Card style={{ width: "98%" }}>
+//                                     <Meta
+//                                         avatar={
+//                                             <Avatar
+//                                                 shape="square"
+//                                                 size={64}
+//                                                 src={card.icon}
+//                                                 style={getAnimationStyle(card.id)}
+//                                             />
+//                                         }
+//                                         title={card.title}
+//                                         description={
+//                                             isKibercastLoading ? (
+//                                                 <Button variant="solid" block disabled>
+//                                                     Загрузка...
+//                                                 </Button>
+//                                             ) : isKibercastError ? (
+//                                                 <Button variant="solid" block disabled>
+//                                                     Нет актуального киберкаста
+//                                                 </Button>
+//                                             ) : card.link ? (
+//                                                 <Button 
+//                                                     href={card.link} 
+//                                                     variant="solid" 
+//                                                     block 
+//                                                     target={card.openInNewTab ? "_blank" : undefined}
+//                                                     rel={card.openInNewTab ? "noopener noreferrer" : undefined}
+//                                                 >
+//                                                     {card.buttonText}
+//                                                 </Button>
+//                                             ) : (
+//                                                 <Button
+//                                                     variant="solid"
+//                                                     block
+//                                                     onClick={card.onClick}
+//                                                 >
+//                                                     {card.buttonText}
+//                                                 </Button>
+//                                             )
+//                                         }
+//                                     />
+//                                 </Card>
+//                             </Col>
+//                         );
+//                     })}
 //                 </Row>
 //             </Layout.Content>
 //         </Layout>

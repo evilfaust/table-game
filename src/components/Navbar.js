@@ -63,6 +63,15 @@ const Navbar = () => {
             About
           </Button>
         </Link>
+        <Link to="/esl">
+          <Button
+            type="text"
+            ghost
+            className={`rubik-mono-one-regular nav-bar-btn ${isActive("/esl") ? "active" : ""}`}
+          >
+            ESL
+          </Button>
+        </Link>
         <Link to="/etl">
           <Button
             type="text"
@@ -121,6 +130,17 @@ const Navbar = () => {
             block
           >
             About
+          </Button>
+        </Link>
+        <Link to="/esl" onClick={closeDrawer}>
+          <Button
+            style={isActive("/esl") ? activeButtonStyle : buttonStyle}
+            className={isActive("/esl") ? "active" : ""}
+            type="default"
+            ghost
+            block
+          >
+            ETL
           </Button>
         </Link>
         <Link to="/etl" onClick={closeDrawer}>
