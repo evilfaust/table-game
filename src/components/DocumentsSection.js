@@ -28,7 +28,7 @@ const DocumentsSection = () => {
     },
     {
       title: "Правила CS 2",
-      avatar: "/images/icon029.png",
+      avatar: "/images/icon035.png",
       description: "",
       button: {
         text: "Смотреть",

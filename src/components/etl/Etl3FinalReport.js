@@ -29,7 +29,7 @@ const Etl3FinalReport = () => {
               Это настоящий триумф сахалинского киберспорта!
             </Paragraph>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexDirection: isMobile ? 'column' : 'row', textAlign: isMobile ? 'center' : 'left' }}>
-            <Avatar shape='square' size={48} src="/images/icon029.png" style={{ objectFit: 'contain', display: 'block' }} />
+            <Avatar shape='square' size={48} src="/images/icon035.png" style={{ objectFit: 'contain', display: 'block' }} />
             <Title level={3}>Counter-Strike 2: MIRAI Ultimate — безоговорочные лидеры!</Title>
             </div>
             <Paragraph>
@@ -103,7 +103,7 @@ export default Etl3FinalReport;
 //               Это настоящий триумф сахалинского киберспорта!
 //             </Paragraph>
 //             <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-//             <Avatar shape='square' size={48} src="/images/icon029.png" style={{ objectFit: 'contain', display: 'block' }} />
+//             <Avatar shape='square' size={48} src="/images/icon035.png" style={{ objectFit: 'contain', display: 'block' }} />
 //             <Title level={3}>Counter-Strike 2: MIRAI Ultimate — безоговорочные лидеры!</Title>
 //             </div>
 //             <Paragraph>
@@ -177,7 +177,7 @@ export default Etl3FinalReport;
 //               Это настоящий триумф сахалинского киберспорта!
 //             </Paragraph>
 //             <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-//             <Avatar shape='square' size={48} src="/images/icon029.png" />
+//             <Avatar shape='square' size={48} src="/images/icon035.png" />
 //             <Title level={3}>Counter-Strike 2: MIRAI Ultimate — безоговорочные лидеры!</Title>
 //             </div>
 //             <Paragraph>

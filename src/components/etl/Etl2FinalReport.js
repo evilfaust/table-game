@@ -28,7 +28,7 @@ const Etl2FinalReport = () => {
             соперников далеко позади. 🏆 Этот триумф стал доказательством того, что сахалинские команды способны на великие победы!
             </Paragraph>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexDirection: isMobile ? 'column' : 'row', textAlign: isMobile ? 'center' : 'left'  }}>
-            <Avatar shape='square' size={48} src="/images/icon029.png" />
+            <Avatar shape='square' size={48} src="/images/icon035.png" />
             <Title level={3}>Counter-Strike 2: 21 int — непобедимые!</Title>
             </div>
             <Paragraph>

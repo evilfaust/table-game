@@ -138,7 +138,7 @@ const Navbar = () => {
             ghost
             block
           >
-            ETL
+            ESL
           </Button>
         </Link>
         <Link to="/etl" onClick={closeDrawer}>
