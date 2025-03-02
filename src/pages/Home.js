@@ -97,7 +97,7 @@ const Home = () => {
   return (
     <>
       <Layout>
-        <Layout.Content style={{ padding: "10px", width: "80%", margin: "0 auto" }}>
+        <Layout.Content style={{ padding: "10px", width: isMobile ? "97%" : "80%", margin: "0 auto" }}>
           <ContentLink
             onToggleTables={(section) => handleToggleSection(section || 'tables')}
             onToggleSchedule={(section) => handleToggleSection(section || 'schedule')}
@@ -119,7 +119,7 @@ const Home = () => {
                 style={{ marginBottom: '10px', width: '100%' }}
                 onClick={() => handleToggleSection('tables')}
               >
-                {tableButtonText}
+                &#8592; {tableButtonText}
               </Button>
             )}
             <Row
@@ -165,13 +165,13 @@ const Home = () => {
        </Layout>
         {showSchedule && (
           <Layout className="">
-            <Layout.Content style={{ padding: "10px", width: "80%", margin: "0 auto" }}>
+            <Layout.Content style={{ padding: "10px", width: isMobile ? "97%" : "80%", margin: "0 auto" }}>
               {isMobile && !showCards && (
                 <Button
                   style={{ marginBottom: '10px', width: '100%' }}
                   onClick={() => handleToggleSection('schedule')}
                 >
-                  {scheduleButtonText}
+                  &#8592; {scheduleButtonText}
                 </Button>
               )}
               <Row gutter={[16, 16]} className="">
@@ -184,13 +184,13 @@ const Home = () => {
         )}
         {showDocuments && (
           <Layout className="">
-            <Layout.Content style={{ padding: "10px", width: "80%", margin: "0 auto" }}>
+            <Layout.Content style={{ padding: "10px", width: isMobile ? "97%" : "80%", margin: "0 auto" }}>
               {isMobile && !showCards && (
                 <Button
                   style={{ marginBottom: '10px', width: '100%' }}
                   onClick={() => handleToggleSection('documents')}
                 >
-                  {documentsButtonText}
+                  &#8592; {documentsButtonText}
                 </Button>
               )}
               <Row gutter={[16, 16]} className="">
@@ -203,13 +203,13 @@ const Home = () => {
         )}
       {showNewsFeed && (
           <Layout>
-            <Layout.Content style={{ padding: "10px", width: "80%", margin: "0 auto" }}>
+            <Layout.Content style={{ padding: "10px", width: isMobile ? "97%" : "80%", margin: "0 auto" }}>
               {isMobile && !showCards && (
                 <Button
                   style={{ marginBottom: '10px', width: '100%' }}
                   onClick={() => handleToggleSection('newsfeed')}
                 >
-                  {newsButtonText}
+                 &#8592; {newsButtonText}
                 </Button>
               )}
               <Row gutter={[16, 16]} className="">

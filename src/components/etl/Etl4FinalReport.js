@@ -1,12 +1,14 @@
 import React from 'react';
 import { Typography, Card, Avatar, Row, Col, Divider } from 'antd';
+import { useMediaQuery } from 'react-responsive';
 
 const { Title, Paragraph } = Typography;
 
 const Etl4FinalReport = () => {
+    const isMobile = useMediaQuery({ maxWidth: 768 });
   return (
     <Card style={{ maxWidth: "90%", margin: '0 auto', padding: 20 }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexDirection: isMobile ? 'column' : 'row', textAlign: isMobile ? 'center' : 'left'  }}>
         <Avatar size={48} shape='square' src="/images/icon025.png" />
         <Title level={2} style={{textAlign: "center"}}>Финал киберспортивного турнира ETL 4: борьба за чемпионство</Title>
         </div>
@@ -17,7 +19,7 @@ const Etl4FinalReport = () => {
             На Сахалине завершился финал четвертого сезона киберспортивной лиги EMCO.TECH.SPORTS, который стал настоящим праздником для игроков 
             и зрителей. Это второй очный турнир, организованный лигой, и он продемонстрировал, насколько стремительно развивается киберспорт в регионе.
             </Paragraph>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexDirection: isMobile ? 'column' : 'row', textAlign: isMobile ? 'center' : 'left'  }}>
             <Avatar shape='square' size={48} src="/images/icon020.png" />
             <Title level={3}>Жаркие сражения и неожиданные повороты</Title>
             </div>
@@ -43,7 +45,7 @@ const Etl4FinalReport = () => {
         <img className="bottomleft" style={{height: "24px"}} src="/images/esl-logo.png" alt="EMCO.TECH.SPORTS" />
         </Col>
         <Col lg={16} md={24} xs={24} sm={24}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexDirection: isMobile ? 'column' : 'row', textAlign: isMobile ? 'center' : 'left'  }}>
         <Avatar shape='square' size={48} src="/images/icon025.png" />
         <Title level={3}>Турнир как праздник</Title>
         
@@ -57,7 +59,7 @@ const Etl4FinalReport = () => {
         Победителей ждали ценные призы, включая топовое игровое кресло и монитор с частотой 240 Гц. А чемпионы и серебряные призеры турнира 
         получили денежные призы. Общий призовой фонд от Восточной горнорудной компании составил более 200 тысяч рублей.
         </Paragraph>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexDirection: isMobile ? 'column' : 'row', textAlign: isMobile ? 'center' : 'left'  }}>
         <Avatar shape='square' size={48} src="/images/icon026.png" />
         <Title level={3}>Развитие киберспорта в регионе</Title>
         

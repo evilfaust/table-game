@@ -1,12 +1,14 @@
 import React from 'react';
 import { Typography, Card, Avatar, Row, Col, Divider } from 'antd';
+import {useMediaQuery} from "react-responsive";
 
 const { Title, Paragraph } = Typography;
 
 const Etl2FinalReport = () => {
+    const isMobile = useMediaQuery({ maxWidth: 768 });
   return (
     <Card style={{ maxWidth: "90%", margin: '0 auto', padding: 20 }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexDirection: isMobile ? 'column' : 'row', textAlign: isMobile ? 'center' : 'left'  }}>
         {/* <Avatar size={48} shape='square' src="/images/icon025.png" /> */}
         <Title level={2} style={{textAlign: "center"}}>🎮 ВТОРОЙ САХАЛИНСКИЙ КИБЕРТУРНИР ETL2: ЗАВЕРШЕНИЕ ГОДА С ГРОМКИМИ ПОБЕДАМИ! 🎮</Title>
         </div>
@@ -17,7 +19,7 @@ const Etl2FinalReport = () => {
               Этот чемпионат стал настоящим праздником для всех фанатов игр: 400 участников из 74 команд со всей Сахалинской области сражались за звание 
               лучших на протяжении двух месяцев. Финальные баталии прошли 23 и 24 декабря, собрав зрителей и болельщиков в Южно-Сахалинске.
             </Paragraph>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexDirection: isMobile ? 'column' : 'row', textAlign: isMobile ? 'center' : 'left'  }}>
             <Avatar shape='square' size={48} src="/images/icon028.png" />
             <Title level={3}>Dota 2: Sheshenyn Syngen — короли арены!</Title>
             </div>
@@ -25,7 +27,7 @@ const Etl2FinalReport = () => {
             В дисциплине Dota 2 чемпионом стала команда Sheshenyn Syngen, показавшая невероятную игру. Их стратегии, слаженность и мастерство оставили 
             соперников далеко позади. 🏆 Этот триумф стал доказательством того, что сахалинские команды способны на великие победы!
             </Paragraph>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexDirection: isMobile ? 'column' : 'row', textAlign: isMobile ? 'center' : 'left'  }}>
             <Avatar shape='square' size={48} src="/images/icon029.png" />
             <Title level={3}>Counter-Strike 2: 21 int — непобедимые!</Title>
             </div>
@@ -46,7 +48,7 @@ const Etl2FinalReport = () => {
         <img className="bottomleft" style={{height: "24px"}} src="/images/esl-logo.png" alt="EMCO.TECH.SPORTS" />
         </Col>
         <Col lg={16} md={24} xs={24} sm={24}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexDirection: isMobile ? 'column' : 'row', textAlign: isMobile ? 'center' : 'left'  }}>
         <Avatar shape='square' size={48} src="/images/icon025.png" />
         <Title level={3}>Масштаб и значимость ETL2</Title>
         </div>
@@ -59,8 +61,8 @@ const Etl2FinalReport = () => {
         <Paragraph>
         - Два месяца напряжённой борьбы — каждая игра была наполнена эмоциями, драйвом и невероятными моментами.
         </Paragraph>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-        <Avatar shape='square' size={48} src="/images/icon026.png" />
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexDirection: isMobile ? 'column' : 'row', textAlign: isMobile ? 'center' : 'left'  }}>
+        <Avatar shape='square' size={48} src="/images/icon031.png" />
         <Title level={3}>Что дальше?</Title>
         </div>
         <Paragraph>

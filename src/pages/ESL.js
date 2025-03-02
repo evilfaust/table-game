@@ -14,10 +14,10 @@ const ESL = () => {
             <TableDOTA2 />
         </Layout.Content>
         </Layout>
-        {/* <div>
-            <h1>ESL</h1>
-        {/* <TournamentBracket /> 
-        </div> */}
+        {/*<div>*/}
+        {/*    <h1>ESL</h1>*/}
+        {/*<TournamentBracket />*/}
+        {/*</div>*/}
         </>
 
     )
