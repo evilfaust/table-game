@@ -120,7 +120,7 @@ const SendData = () => {
     formData.append('demo', file);
 
     try {
-      const response = await axios.post('http://127.0.0.1:5000/parse-demo', formData, {
+      const response = await axios.post('http://127.0.0.1:5005/parse-demo', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
