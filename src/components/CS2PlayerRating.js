@@ -1,7 +1,5 @@
-
-
 import React, { useEffect, useState } from 'react';
-import { Card, Modal, List, Avatar, Table, Spin, message } from 'antd';
+import { Card, Modal, Row, Col, Avatar, Table, Spin, message } from 'antd';
 import PocketBase from 'pocketbase';
 
 const pb = new PocketBase('https://apigame.emcotech.ru');
@@ -105,8 +103,9 @@ const CS2PlayerRating = () => {
     return isNaN(num) ? value : num.toFixed(2);
   };
 
+  // Выбор цвета карточки по рангу
   const getCardColor = (rank) => {
-    if (rank <= 3) return "#ffd700"; // золотой или вот такой цвет FEA202
+    if (rank <= 3) return "#ffd700"; // золотой
     if (rank <= 10) return "#c0c0c0"; // серебряный
     if (rank <= 20) return "#cd7f32"; // бронзовый
     return "#fff"; // остальные — белый
@@ -141,11 +140,9 @@ const CS2PlayerRating = () => {
       {loading ? (
         <Spin />
       ) : (
-        <List
-          grid={{ gutter: 16, column: 4 }}
-          dataSource={rankedPlayers}
-          renderItem={(player) => (
-            <List.Item>
+        <Row gutter={[16, 16]}>
+          {rankedPlayers.map(player => (
+            <Col xs={24} sm={12} md={8} lg={6} key={player.id}>
               <Card
                 onClick={() => setSelectedPlayer(player)}
                 style={{
@@ -158,7 +155,6 @@ const CS2PlayerRating = () => {
                 <div style={{ fontSize: 18, fontWeight: 'bold' }}>{player.NikName}</div>
                 <div style={{ marginTop: 8, display: 'flex', justifyContent: 'center' }}>
                   <Avatar
-                    // shape="square"
                     src={player.Photo ? pb.files.getURL(player, player.Photo, { thumb: '100x100' }) : "/images/icon031.png"}
                     size={100}
                   />
@@ -175,9 +171,9 @@ const CS2PlayerRating = () => {
                   )}
                 </div>
               </Card>
-            </List.Item>
-          )}
-        />
+            </Col>
+          ))}
+        </Row>
       )}
 
       <Modal
@@ -199,11 +195,9 @@ const CS2PlayerRating = () => {
                   {formattedTeamsMapping[selectedPlayer.id] ? (
                     <div style={{ display: 'flex', alignItems: 'center' }}>
                       <Avatar
-                        src={
-                          formattedTeamsMapping[selectedPlayer.id].logo
-                            ? pb.files.getURL(formattedTeamsMapping[selectedPlayer.id], formattedTeamsMapping[selectedPlayer.id].logo, { thumb: '100x100' })
-                            : null
-                        }
+                        src={formattedTeamsMapping[selectedPlayer.id].logo
+                          ? pb.files.getURL(formattedTeamsMapping[selectedPlayer.id], formattedTeamsMapping[selectedPlayer.id].logo, { thumb: '100x100' })
+                          : null}
                       />
                       <span style={{ marginLeft: 8 }}>
                         {formattedTeamsMapping[selectedPlayer.id].displayName || "Команда"}
