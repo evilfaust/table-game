@@ -117,8 +117,11 @@ const MatchesList = () => {
       return <div>Данные о команде отсутствуют</div>;
     }
     return (
-      <div style={{ display: 'flex', alignItems: 'center' }}>
-        <Avatar src={teamData.logo || null} alt={teamData.team_name} />
+      <div style={{ display: 'flex', alignItems: 'center'}}>
+        <Avatar 
+        shape="square"
+        style={{backgroundColor: '#001529' }}
+        src={teamData.logo || null} alt={teamData.team_name} />
         <span style={{ marginLeft: 8 }}>{teamData.team_name}</span>
       </div>
     );
