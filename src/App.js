@@ -8,7 +8,11 @@ import News from './pages/News';
 import HeroSection from "./components/HeroSection";
 import EsportsFooter from './components/EsportsFooter';
 import ESL from './pages/ESL';
+<<<<<<< Updated upstream
 // import SendData from "./utils/SendData";
+=======
+import API from "./pages/API";
+>>>>>>> Stashed changes
 
 function App() {
   return (
@@ -22,7 +26,11 @@ function App() {
           <Route path="/esl" element={<ESL />} />
           <Route path="/etl" element={<ETL />} />
           <Route path="/news" element={<News />} />
+<<<<<<< Updated upstream
             {/* <Route path="/senddata" element={<SendData />} /> */}
+=======
+          <Route path="/senddata" element={<API />} />
+>>>>>>> Stashed changes
         </Routes>
       </div>
       <EsportsFooter />
