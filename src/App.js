@@ -8,7 +8,7 @@ import News from './pages/News';
 import HeroSection from "./components/HeroSection";
 import EsportsFooter from './components/EsportsFooter';
 import ESL from './pages/ESL';
-import SendData from "./utils/SendData";
+// import SendData from "./utils/SendData";
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
           <Route path="/esl" element={<ESL />} />
           <Route path="/etl" element={<ETL />} />
           <Route path="/news" element={<News />} />
-            <Route path="/senddata" element={<SendData />} />
+            {/* <Route path="/senddata" element={<SendData />} /> */}
         </Routes>
       </div>
       <EsportsFooter />
