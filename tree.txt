@@ -1,0 +1,58 @@
+.
+├── LICENSE
+├── README.md
+├── build.zip
+├── package-lock.json
+├── package.json
+├── public
+│   ├── favicon.ico
+│   ├── images
+│   ├── index.html
+│   ├── logo192.png
+│   ├── logo512.png
+│   ├── manifest.json
+│   └── robots.txt
+├── src
+│   ├── App.css
+│   ├── App.js
+│   ├── App.test.js
+│   ├── TeamsTable.js
+│   ├── components
+│   │   ├── ContentLink.js
+│   │   ├── DocumentsSection.js
+│   │   ├── EsportAbout.js
+│   │   ├── EsportsFooter.js
+│   │   ├── HeroSection.js
+│   │   ├── LeagueSchedule.js
+│   │   ├── Navbar.css
+│   │   ├── Navbar.js
+│   │   ├── NewsDescription.js
+│   │   ├── NewsFeed.js
+│   │   ├── PartnersSection.js
+│   │   ├── PrivateRoute.js
+│   │   ├── TableCS2.js
+│   │   ├── TableDOTA2.js
+│   │   ├── TournamentBracket.js
+│   │   ├── contentlink.css
+│   │   ├── esportsfooter.css
+│   │   ├── etl
+│   │   ├── getLatestKibercastLink.js
+│   │   └── imagesetl4.js
+│   ├── index.css
+│   ├── index.js
+│   ├── logo.svg
+│   ├── pages
+│   │   ├── About.js
+│   │   ├── ESL.js
+│   │   ├── ETL.js
+│   │   ├── Home.js
+│   │   ├── News.js
+│   │   ├── TeamApplication.js
+│   │   └── animations.css
+│   ├── reportWebVitals.js
+│   ├── setupTests.js
+│   └── utils
+│       ├── LoginForm.js
+│       └── SendData.js
+├── table.7z
+└── tree.txt
