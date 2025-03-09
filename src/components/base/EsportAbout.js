@@ -2,8 +2,8 @@ import React from 'react';
 import {Row, Col, Typography, Layout, Card, Avatar} from 'antd';
 // import { MessageOutlined, EyeOutlined, CheckOutlined } from '@ant-design/icons';
 
-import LeagueSchedule from '../components/LeagueSchedule';
-import DocumentsSection from '../components/DocumentsSection';
+import LeagueSchedule from '../LeagueSchedule';
+import DocumentsSection from './DocumentsSection';
 
 // const { Meta } = Card;
 const { Title, Text } = Typography;

@@ -1,6 +1,5 @@
-import NewsDescription from "../components/NewsDescription";
-import NewsFeed from "../components/NewsFeed";
-
+import NewsDescription from "../components/base/NewsDescription";
+import NewsFeed from "../components/base/NewsFeed";
 
 const News = () => {
     return (
@@ -8,9 +7,6 @@ const News = () => {
         <NewsDescription />
             <NewsFeed />
         </>
-
-
     )
 }
-
 export default News;

@@ -1,11 +1,10 @@
 import React from "react";
-import TournamentBracket from "../components/TournamentBracket";
+// import TournamentBracket from "../components/TournamentBracket";
 import { Layout } from 'antd';
 import TableCS2 from "../components/TableCS2";
 import TableDOTA2 from "../components/TableDOTA2";
 // import MatchesList from "../components/etl/MatchesList";
 // import CS2PlayerRating from "../components/CS2PlayerRating";
-
 
 const ESL = () => {
     return (
@@ -20,7 +19,7 @@ const ESL = () => {
         </Layout>
         {/*<div>*/}
         {/*    <h1>ESL</h1>*/}
-        <TournamentBracket />
+        {/*<TournamentBracket />*/}
         {/*</div>*/}
         </>
 

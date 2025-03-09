@@ -2,8 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { Card, Row, Col, Spin, Alert, Modal, Layout } from 'antd';
-import EsportAbout from "../components/EsportAbout";
-import PartnersSection from '../components/PartnersSection';
+import EsportAbout from "../components/base/EsportAbout";
+import PartnersSection from '../components/base/PartnersSection';
 
 
 const About = () => {

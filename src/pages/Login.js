@@ -1,21 +1,17 @@
-// src/pages/TeamApplication.js
+// src/pages/Login.js
 import React from 'react';
 import {Layout} from "antd";
 import RegistrationTeam from "../components/RegistrationTeam";
 import {useMediaQuery} from "react-responsive";
+import RegistrationInfo from "../components/RegistrationInfo";
 
-const TeamApplication = () => {
+const Login = () => {
     const isMobile = useMediaQuery({ maxWidth: 768 });
   return (
       <>
-
-      x
-    <div>
-      <h1>Регистрация команды</h1>
-      <p>Форма для регистрации команды будет здесь.</p>
-    </div>
       <Layout>
           <Layout.Content style={{ padding: "10px", width: isMobile ? "97%" : "80%", margin: "0 auto" }}>
+              <RegistrationInfo />
               <RegistrationTeam />
           </Layout.Content>
       </Layout>
@@ -23,4 +19,4 @@ const TeamApplication = () => {
   );
 };
 
-export default TeamApplication;
+export default Login;

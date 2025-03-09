@@ -1,12 +1,12 @@
 import { Col, Layout, Row, Button } from "antd";
 import React, { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
-import ContentLink from "../components/ContentLink";
+import ContentLink from "../components/base/ContentLink";
 import TableCS2 from "../components/TableCS2";
 import TableDOTA2 from "../components/TableDOTA2";
 import LeagueSchedule from "../components/LeagueSchedule";
-import DocumentsSection from "../components/DocumentsSection";
-import NewsFeed from "../components/NewsFeed";
+import DocumentsSection from "../components/base/DocumentsSection";
+import NewsFeed from "../components/base/NewsFeed";
 
 const Home = () => {
   const [activeTable, setActiveTable] = useState("CS2");

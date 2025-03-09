@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Layout, Card, Avatar, Row, Col, Button } from 'antd';
 import { useMediaQuery } from 'react-responsive';
 import './contentlink.css'; // CSS для расширенного набора анимаций
-import { getLatestKibercastLink } from './getLatestKibercastLink';
+import { getLatestKibercastLink } from '../../utils/getLatestKibercastLink';
 const { Meta } = Card;
 
 const ContentLink = ({

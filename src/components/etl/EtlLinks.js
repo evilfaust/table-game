@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Layout, Card, Avatar, Row, Col, Button } from 'antd';
-import '../contentlink.css'; // CSS для расширенного набора анимаций
+import '../base/contentlink.css'; // CSS для расширенного набора анимаций
 const { Meta } = Card;
 
 const EtlLink = ({
