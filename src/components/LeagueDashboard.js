@@ -59,7 +59,7 @@ const LeagueDashboard = () => {
     {
       id: 2,
       section: 'playerStats',
-      title: "Статистика игроков",
+      title: "Топ игроков",
       icon: discipline === 'CS2' ? "/images/icon034.png" : "/images/icon036.png",
       buttonText: "Открыть статистику",
       active: discipline === 'CS2' // для DOTA2 будет false
@@ -69,7 +69,7 @@ const LeagueDashboard = () => {
       section: 'matches',
       title: "Сыгранные матчи",
       icon: discipline === 'CS2' ? "/images/icon032.png" : "/images/icon037.png",
-      buttonText: "Открыть матчи",
+      buttonText: "Матчи",
       active: discipline === 'CS2' // для DOTA2 будет false
     }
   ];
