@@ -76,7 +76,7 @@ const ContentLink = ({
         { id: 4, section: 'newsfeed', title: "Новости лиги", icon: "/images/icon004.png", onClick: onToggleNewsFeed, buttonText: newsButtonText, openInNewTab: false  },
         { id: 5, section: 'partners', title: "Партнеры лиги", icon: "/images/icon005.png", link: "/about#partneri", buttonText: "Перейти", openInNewTab: false  },
         { id: 6, section: 'etl', title: "Отчеты с ETL", icon: "/images/icon006.png", link: "/etl", buttonText: "Смотреть отчеты", openInNewTab: false  },
-        { id: 7, section: 'stats', title: "Статистика", icon: "/images/icon007.png", link: "#", buttonText: "Открыть статистику", openInNewTab: true  },
+        { id: 7, section: 'stats', title: "Лига ESL", icon: "/images/icon007.png", link: "/esl", buttonText: "Перейти к лиге", openInNewTab: false  },
         { id: 8, section: 'kibercast', title: "Киберкаст", icon: "/images/icon008.png", link: kibercastLink?.link || "#", buttonText: "Перейти к киберкасту", openInNewTab: true  }
     ];
 

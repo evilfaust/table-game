@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Table, Modal, Card, Avatar, Row, Col, Typography, Badge, Tag, Spin, Button } from 'antd';
-import { UserOutlined, TrophyOutlined, TeamOutlined } from '@ant-design/icons';
+import {UserOutlined, TrophyOutlined, TeamOutlined, ProfileFilled} from '@ant-design/icons';
 import PocketBase from 'pocketbase';
 
 const { Title, Text } = Typography;
@@ -214,6 +214,7 @@ const TableCS2 = () => {
             style={{ margin: '4px', cursor: 'pointer' }}
             onClick={() => fetchPlayerDetails(player.id)}
           >
+            <ProfileFilled /> {'  '}
             {player.nickname}
           </Tag>
         ))}
