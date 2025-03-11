@@ -1,0 +1,16 @@
+.secondary-menu-container {
+  padding: 10px;
+  text-align: center;
+  /* Здесь позиционирование относительное, меню остается внутри страницы */
+  position: relative;
+}
+
+.secondary-menu-content {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Если нужно, можно добавить дополнительные стили для кнопок,
+   либо использовать уже существующие стили из Navbar.css для .nav-bar-btn */

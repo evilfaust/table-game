@@ -4,7 +4,7 @@ import PocketBase from 'pocketbase';
 
 const pb = new PocketBase('https://apigame.emcotech.ru');
 
-const MatchesList = () => {
+const MatchesListCS2 = () => {
   const [matches, setMatches] = useState([]);
   const [teamsEsl, setTeamsEsl] = useState({});
   const [teamsMapping, setTeamsMapping] = useState({});
@@ -134,7 +134,7 @@ const MatchesList = () => {
       ) : (
         <Row gutter={[16, 16]}>
           {matches.map(match => (
-            <Col key={match.id} xs={24} sm={12} md={8} lg={6}>
+            <Col key={match.id} xs={24} sm={12} md={8} lg={8}>
               <Card onClick={() => openMatchModal(match)} style={{ cursor: 'pointer' }}>
                 <div style={{ marginBottom: 8, fontWeight: 'bold' }}>
                   {match.date ? new Date(match.date).toLocaleString() : 'Дата неизвестна'}
@@ -298,4 +298,4 @@ const MatchesList = () => {
   );
 };
 
-export default MatchesList;
+export default MatchesListCS2;

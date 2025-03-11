@@ -1,40 +1,77 @@
 import React from 'react';
-import {Button, Divider, Layout} from 'antd';
-import { useNavigate } from 'react-router-dom';
+import { Button, Divider } from 'antd';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../utils/AuthContext';
+import '../components/base/Navbar.css'; // Используем стили Navbar для единообразия
 
 const SecondaryMenu = () => {
   const { isAuthenticated, isModerator, logout } = useAuth();
   const navigate = useNavigate();
+  const location = useLocation();
 
   if (!isAuthenticated) return null;
 
   const handleLogout = () => {
     logout();
-    navigate('/login'); // После выхода отправляем пользователя на страницу входа
+    navigate('/login'); // Перенаправляем пользователя на страницу входа после выхода
+  };
+
+  const isActive = (path) => {
+    // Если текущий путь равен или начинается с path, считаем кнопку активной
+    return location.pathname === path || location.pathname.startsWith(path);
   };
 
   return (
-    <Layout>
-      <Layout.Content style={{ padding: "10px", textAlign: "center" }}>
-        <Button type="primary" onClick={() => navigate('/application-status')} style={{ marginRight: 8 }}>
+    <div className="secondary-menu-container">
+      <div className="secondary-desktop-menu">
+        <Button
+          type="text"
+          ghost
+          className={`rubik-mono-one-regular nav-bar-btn-sm ${isActive('/application-status') ? 'active' : ''}`}
+          onClick={() => navigate('/application-status')}
+        >
           Статус заявки
         </Button>
-        <Button type="primary" onClick={() => navigate('/team-application')} style={{ marginRight: 8 }}>
+        <Button
+          type="text"
+          ghost
+          className={`rubik-mono-one-regular nav-bar-btn-sm ${isActive('/team-application') ? 'active' : ''}`}
+          onClick={() => navigate('/team-application')}
+        >
           Подать заявку
         </Button>
         {isModerator && (
-          <Button onClick={() => navigate('/moderator')} color="purple" variant="solid" style={{ marginRight: 8 }}>
-            Модераторская панель
-          </Button>
+          <>
+            <Button
+              type="text"
+              ghost
+              className={`rubik-mono-one-regular nav-bar-btn-sm ${isActive('/moderator') ? 'active' : ''}`}
+              onClick={() => navigate('/moderator')}
+            >
+              Модераторская панель
+            </Button>
+            <Button
+              type="text"
+              ghost
+              className={`rubik-mono-one-regular nav-bar-btn-sm ${isActive('/moderatorstat') ? 'active' : ''}`}
+              onClick={() => navigate('/moderatorstat')}
+            >
+              Статистика & аналитика
+            </Button>
+          </>
         )}
-        <Button color="danger" variant="outlined" onClick={handleLogout}>
+        <Button
+          type="text"
+          ghost
+          className="rubik-mono-one-regular nav-bar-btn-sm"
+          onClick={handleLogout}
+        >
           Выйти
         </Button>
-         <Divider style={{ borderColor: "#FEA202", margin: "8px 0" }} />
-      </Layout.Content>
-    </Layout>
+      </div>
+    </div>
   );
 };
 
 export default SecondaryMenu;
+
