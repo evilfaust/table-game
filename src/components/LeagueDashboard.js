@@ -67,7 +67,7 @@ const LeagueDashboard = () => {
     {
       id: 3,
       section: 'matches',
-      title: "Сыгранные матчи",
+      title: "Матчи",
       icon: discipline === 'CS2' ? "/images/icon032.png" : "/images/icon037.png",
       buttonText: "Матчи",
       active: discipline === 'CS2' // для DOTA2 будет false
