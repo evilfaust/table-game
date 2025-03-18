@@ -6,12 +6,17 @@ import TableDOTA2 from "../components/TableDOTA2";
 import LeagueDashboard from "../components/LeagueDashboard";
 // import MatchesListCs2 from "../components/etl/MatchesListCs2";
 // import CS2PlayerRating from "../components/CS2PlayerRating";
+import {useMediaQuery} from "react-responsive";
+
+
 
 const ESL = () => {
+    // Мобильная версия
+  const isMobile = useMediaQuery({ maxWidth: 768 });
     return (
         <>
         <Layout>
-        <Layout.Content style={{ padding: "10px", width: "80%", margin: "0 auto" }}>
+        <Layout.Content style={{ padding: "10px", width: isMobile ? "97%" : "80%", margin: "0 auto" }}>
             <LeagueDashboard />
             {/* <MatchesListCs2 />
             <CS2PlayerRating /> */}

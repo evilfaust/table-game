@@ -128,13 +128,13 @@ const MatchesListCS2 = () => {
   };
 
   return (
-    <div style={{ padding: 20 }}>
+    <div style={{ padding: 2 }}>
       {loading ? (
         <Spin />
       ) : (
         <Row gutter={[16, 16]}>
           {matches.map(match => (
-            <Col key={match.id} xs={24} sm={12} md={8} lg={8}>
+            <Col key={match.id} xs={24} sm={12} md={12} lg={8}>
               <Card onClick={() => openMatchModal(match)} style={{ cursor: 'pointer' }}>
                 <div style={{ marginBottom: 8, fontWeight: 'bold' }}>
                   {match.date ? new Date(match.date).toLocaleString() : 'Дата неизвестна'}

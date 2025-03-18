@@ -7,9 +7,13 @@ import DOTA2PlayerRating from './DOTA2PlayerRating';
 import TableDOTA2 from './TableDOTA2';
 import MatchesListDOTA2 from './etl/MatchesListDOTA2';
 
+
 const { Title, Paragraph } = Typography;
 
 const LeagueDashboard = () => {
+
+
+
   // По умолчанию выбран CS2
   const [discipline, setDiscipline] = useState('CS2');
   // activeSection хранит выбранный раздел: 'tables', 'playerStats', 'matches'
@@ -75,7 +79,7 @@ const LeagueDashboard = () => {
   ];
 
   return (
-    <Layout style={{ padding: '20px' }}>
+    <Layout style={{ padding: '2px' }}>
       <Layout.Content>
         <Title level={2}>Прогресс киберспортивной лиги</Title>
         <Paragraph>

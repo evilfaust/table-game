@@ -136,7 +136,7 @@ const CS2PlayerRating = () => {
   };
 
   return (
-    <div style={{ padding: 20 }}>
+    <div style={{ padding: 1 }}>
       {loading ? (
         <Spin />
       ) : (
