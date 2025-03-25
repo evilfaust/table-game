@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Layout, Typography, Row, Col, Card, Button, Select, Tag, Divider } from 'antd';
 import CS2PlayerRating from './CS2PlayerRating';
 import TableCS2 from './TableCS2';
@@ -6,18 +6,28 @@ import MatchesListCS2 from './etl/MatchesListCS2';
 import DOTA2PlayerRating from './DOTA2PlayerRating';
 import TableDOTA2 from './TableDOTA2';
 import MatchesListDOTA2 from './etl/MatchesListDOTA2';
-
+import { useMediaQuery } from 'react-responsive';
 
 const { Title, Paragraph } = Typography;
 
 const LeagueDashboard = () => {
 
-
+  const isMobile = useMediaQuery({ maxWidth: 768 });
+  // Ссылка для получения элемента картинки
+  const logoRef = useRef(null);
+  // Состояние для хранения ширины картинки
+  const [logoWidth, setLogoWidth] = useState(0);
 
   // По умолчанию выбран CS2
   const [discipline, setDiscipline] = useState('CS2');
   // activeSection хранит выбранный раздел: 'tables', 'playerStats', 'matches'
   const [activeSection, setActiveSection] = useState(null);
+
+  useEffect(() => {
+    if (logoRef.current) {
+      setLogoWidth(logoRef.current.offsetWidth);
+    }
+  }, [logoRef, discipline]);
 
   const handleSectionToggle = (section) => {
     setActiveSection(prev => (prev === section ? null : section));
@@ -88,40 +98,49 @@ const LeagueDashboard = () => {
         </Paragraph>
 
         {/* Селектор дисциплины и логотип */}
-        <Row align="middle" style={{ marginBottom: 20 }}>
-          <Col>
-            {discipline === 'CS2' ? (
-              <Tag color="#FEA202">
-                <img
-                  src="/images/cs2-logo.png"
-                  style={{ height: '48px' }}
-                  alt="CS2 Logo"
-                />
-              </Tag>
-            ) : (
-              <Tag color="#FEA202">
-                <img
-                  src="/images/dota2-logo.png"
-                  style={{ height: '48px' }}
-                  alt="DOTA 2 Logo"
-                />
-              </Tag>
-            )}
-          </Col>
-          <Col style={{ marginLeft: 20 }}>
-            <Select
-              value={discipline}
-              onChange={(value) => {
-                setDiscipline(value);
-                setActiveSection(null); // сброс выбранного раздела при смене дисциплины
-              }}
-              style={{ width: 200 }}
-            >
-              <Select.Option value="CS2">Counter Strike 2</Select.Option>
-              <Select.Option value="DOTA2">DOTA 2</Select.Option>
-            </Select>
-          </Col>
-        </Row>
+        <Row
+      align="middle"
+      style={{
+        marginBottom: 20,
+        flexDirection: isMobile ? 'column' : 'row'
+      }}
+    >
+      <Col style={isMobile ? { marginBottom: 10, textAlign: 'center' } : {}}>
+        {discipline === 'CS2' ? (
+          <Tag color="#FEA202">
+            <img
+              ref={logoRef}
+              src="/images/cs2-logo.png"
+              style={{ height: '48px' }}
+              alt="CS2 Logo"
+            />
+          </Tag>
+        ) : (
+          <Tag color="#FEA202">
+            <img
+              ref={logoRef}
+              src="/images/dota2-logo.png"
+              style={{ height: '48px' }}
+              alt="DOTA 2 Logo"
+            />
+          </Tag>
+        )}
+      </Col>
+      <Col style={isMobile ? { textAlign: 'center' } : { marginLeft: 20 }}>
+        <Select
+          value={discipline}
+          onChange={(value) => {
+            setDiscipline(value);
+            setActiveSection(null);
+          }}
+          // Ширина селектора задаётся равной ширине картинки (если она измерена)
+          style={{ width: logoWidth || 'auto' }}
+        >
+          <Select.Option value="CS2">Counter Strike 2</Select.Option>
+          <Select.Option value="DOTA2">DOTA 2</Select.Option>
+        </Select>
+      </Col>
+    </Row>
 
         <Divider />
 
